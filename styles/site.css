@@ -1,0 +1,65 @@
+.my-awesome-dropdown {
+    background-color: pink;
+}
+
+.hero-section {
+  background: url("../images/wind_turbine_on_blue_small.png") 50% no-repeat;
+  background-size: cover;
+  height: 30vh;
+  text-align: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.hero-section .hero-section-text {
+  color: #fefefe;
+  text-shadow: 1px 1px 2px #0a0a0a;
+}
+
+.menu-bg {
+    background-color: transparent !important;
+}
+
+.menu-bg a {
+    background-color: transparent !important;
+}
+
+.menu-bg a:hover {
+    background-color: #1955b5 !important;
+}
+
+.my-menu-text {
+    color: #F8F8FF;
+}
+
+.my-menu-text a {
+    color: #F8F8FF;
+}
+
+.my-menu-text a:hover {
+    color: #F8F8FF;
+}
+
+.my-home-text {
+    font-weight: bold;
+}
+
+.top {
+    position: absolute;
+    top: 8px;
+}
+
+#primary-nav {
+    color: #F8F8FF;
+}
+
+#primary-nav a:hover {
+    color: #F8F8FF;
+}
