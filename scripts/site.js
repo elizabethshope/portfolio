@@ -1,5 +1,5 @@
 function init () {
-    $("#header").load("/views/shared/header.html #headerView", initFoundation);
+    $("#header").load("/portfolio/views/shared/header.html #headerView", initFoundation);
 }
 
 function initFoundation () {
