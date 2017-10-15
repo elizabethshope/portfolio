@@ -5,7 +5,7 @@
 .hero-section {
   background: url("../images/wind_turbine_on_blue_small.png") 50% no-repeat;
   background-size: cover;
-  height: 30vh;
+  height: 300px;
   text-align: center;
   display: -webkit-flex;
   display: -ms-flexbox;

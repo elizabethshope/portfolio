@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Homework 3 | Elizabeth Shope</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="/site.css">
+    
+</head>
+
+<body>
+    <div id="header"></div>
+        <div class="grid-container">
+            <div class="grid-x">
+                <div class="cell">
+                    <h1 style="text-align:center;"> ANLY-503 Homework 3 </h1>
+                    <h2>Assignment</h2>
+                    <p>Create 7 visualizations using qplot and/or ggplot that explore and explain the data. Look into relationships, trends, differences between groups, temporal changes, etc. Your goals are to first explore the data, next explain the data, and finally, reach some conclusions about the data. Form/write your explanations and conclusions *very* succinctly and concisely. The fewer words the better.</p>
+                    <p>Requirements</p>
+                    <ul>
+                        <li>You must use faceting at least once</li>
+                        <li>You must use color in all visualizations</li>
+                        <li>You must have at least one collection of subplots</li>
+                        <li>ALL plots must use a theme (ggthemes)</li>
+                    </ul>
+                    <h2>Introduction</h2>
+                    <p>We have a data set with 21 observations of 5 variables: the date, the mean rate (where lower is better), the mean score (where higher is better), the group size, and the group label (A, B, or C).</p>
+                    <p>Group A has mean rate, mean score and group size measurements on January 1, 2015. Group C has measurements a half month later on January 15, 2015. Group B has measurements a half month after that, on February 1, 2015. This pattern continues, with each group having a measurement every one and a half months, on either the 1st or 15th of the month through November 1, 2015, at which point there are 7 measurements for each of the three groups.</p>
+                    <p>We do not have any information about what this data represents, but will nevertheless attempt to glean some insights.</p>
+                    <h2>Visualization 1</h2>
+                    <h4>Visual: Understanding the Distributions of the Data</h4>
+                    <img src="freqpoly_scores_rates.png" alt="Freqpolys of Mean Rate and Mean Score" style="width:1000px;height:609px;">
+                    <h4>Insight</h4> 
+                    <p>Here, we can see that overall, mean scores are slightly left skewed, and mean rates are slightly right skewed. For both mean scores and mean rates, 13 out of the 21 points fall into the peak bin and the two adjacent bins, though mean scores has a higher peak, with 9 data points falling into that bin.</p>
+                    <h2>Visualization 2</h2>
+                    <h4>Visual: Understanding the Distributions of the Data for Each Group</h4>
+                    <img src="boxplots_score_rate_size.png" alt="Boxplots of Mean Rate, Mean Score, and Group Size" style="width:1000px;height:609px;">
+                    <h4>Insight</h4>
+                    <p>On average, the mean rates and mean scores seem fairly similar for the three groups, but we can see that the variance of the mean scores and mean rates is by far the greatest for Group B. This may be due to the different sizes of the groups: in all instances, Group B is significantly smaller than Groups A and C. Group A also tends to be smaller than Group C, and we can see that its mean rates and scores have a slightly greater variance (taller box in the boxplot) than those of Group C.</p>
+                    <h2>Visualization 3</h2>
+                    <h4>Visual: The Relationship Between Mean Score and Mean Rate</h4>
+                    <img src="mean_rate_vs_mean_score.png" alt="Mean Score vs Mean Rate" style="width:1000px;height:609px;">
+                    <h4>Insight</h4>
+                    <p>There is a clear negative correlation between mean score and mean rate. A statistical test shows that the p-value for this correlation is -0.84. Group B has several points at the far outer edges of the plot with the lowest mean rates and highest mean scores, or highest mean rates and lowest mean scores. Beyond this, though, there is no apparent difference between the three groups.</p>
+                    <h2>Visualization 4</h2>
+                    <h4>Visual: The Relationship Between Normed Weighted Average Rates and Scores Over Time</h4>
+                    <img src="normed_avg_weights_scores.png" alt="Normed Weighted Average Rates and Scores" style="width:1000px;height:609px;">
+                    <h4>Insight</h4>
+                    <p>For this visual, I computed a weighted average mean rate and weighted average mean score (weighted by group size) for each measurement number. This visual further highlights the overall negative relationship between mean rate and mean score; the two lines are almost mirror images of each other.</p>
+                    <h2>Visualization 5</h2>
+                    <h4>Visual: The Relationship Between Normed Weighted Average Rates and Scores Over Time by Group</h4>
+                    <img src="barplots_normed_mean_score_rate.png" alt="Barplots of Normed Mean Score and Rate by Group" style="width:1000px;height:609px;">
+                    <h4>Insight</h4>
+                    <p>Here, we can also see the negative correlation between mean rate and mean score (for most of the bars, they have opposite signs in the mean rate and mean score plots). However, the negative correlation is less dramatic when we do not average the three groups. And in some cases (e.g. Measurement 2 Group C, Measurement 5 Group A), the signs of the normed mean rate and normed mean score are the same.</p>
+                    <h2>Visualization 6</h2>
+                    <h4>Visual: How Mean Scores Change Over Time for the Different Groups</h4>
+                    <img src="mean_score_versus_date.png" alt="Mean Scores by Time and Group" style="width:1000px;height:609px;">
+                    <h4>Insight</h4>  
+                    <p>The relationship between mean score and time does not appear to be very linear for any of the groups; many of the points are not too close to the least squares linear regression lines. All three groups have lower scores at the end than the beginning, but Group A's score decreases the least and, starting from the second measurement, Group A's score has an upward trend. Even including the first measurement, the slope of the regression line for Group A is positive, unlike the regression lines of the other two groups.</p>
+                    <h2>Visualization 7</h2>
+                    <h4>Visual: Further Insights into the Evolution of Mean Score Over Time</h4>
+                    <img src="mean_score_measnum_date.png" alt="Mean Scores vs. Date and Measurement Number" style="width:1000px;height:609px;">
+                    <h4>Insight</h4>
+                    <p>For this visualization, I plotted the mean score vs. date for all three groups in the same plot. I also created an additional variable -- measurement number -- to indicate which of the 7 measurements was being described for each group. Plotting mean score vs. measurement number essentially shifts group C to the left by half a month, and group B to the left by a full month. Neither of these plots are especially revealing, but perhaps with knowledge about how the three groups differ, the differences in how score changed over time for the three groups would make sense.</p>
+                    <h2>Conclusion</h2>
+                    <p>Overall this visualization led to a few key findings:</p>
+                    <ul>
+                        <li>Group A performed the best of the three groups, with the lowest rate and highest score at the end.</li>
+                        <li>Mean score and mean rate had a strong negative correlation.</li>
+                        <li>Group B was the smallest of the three groups, and -- possibly as a result -- had the largest variance in its mean scores and rates.</li>
+                        <li>There was significant fluctuation over time in mean rates and mean scores for all three groups, without a strong pattern.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+    <script src="/site.js"></script>
+</body>
+</html>
