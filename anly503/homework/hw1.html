@@ -3,7 +3,7 @@
     <head>
         <title>Homework 1 | Elizabeth Shope</title>
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css">
-        <link rel="stylesheet" type="text/css" href="/site.css">
+        <link rel="stylesheet" type="text/css" href="../../styles/site.css">
     </head>
     <body>
         <div id="header"></div>
@@ -19,26 +19,26 @@
                     <li>Among young white women (ages 30-34), are breast cancer rates uniform across the different states? Or do they vary? If so, which states have the highest breast cancer rates among young white women? Does this variation look similar for different age groups? </li>
                     <li>Among older women (ages 60-64), what do breast cancer rates look like for different races? </li>
                 </ul>
-                
+
                 <h2>Visualization 1</h2>
                 <img src="WhiteWomenCancerNY.png" alt="WhiteWomenCancerNY" style="width:1000px;height:624px;">
                 <p>Among white women in New York state, we see that breast cancer is by far the most prevalent type of cancer. Another important finding from this graph is that some cancers like colon and rectum cancer, esophageal cancer, and liver cancer appear to have rates that increase steadily with age. Other cancers like breast cancer peak at an earlier age and then the rates taper off.</p>
-                
+
                 <h2>Visualization 2</h2>
                 <img src="CancerWomenNY.png" alt="CancerWomenNY" style="width:1000px;height:624px;">
                 <p>After seeing the results of the first visual, I was curious to break down the cancer rates by race -- and not just to look at the rates among white people. I assumed there would be some differences, but thought that rates would be higher for different racial groups for different types of cancers. This is not what we are seeing, though. Instead, the rates are fairly dramatically higher for white people for all of the types of cancer -- especially for breast cancer and colon and rectum cancer.</p>
                 <p>This makes me wonder why this is. While finding a conclusive answer for this question is well beyond the scope of this homework, I can't help but wonder if this is an indication that non-white people in New York state have less access to health care, so that their cancers are simply not being caught and reported at such a high level, or if there is some other factor that is affecting reporting.</p>
                 <h2>Visualization 3</h2>
                 <div class='tableauPlaceholder' id='viz1505343354267' style='position: relative'><noscript><a href='#'><img alt='Breast Cancer Prevalence Among White Women Ages 30-34 by State ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Br&#47;BreastCancerPrevalenceByState&#47;Sheet1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='BreastCancerPrevalenceByState&#47;Sheet1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Br&#47;BreastCancerPrevalenceByState&#47;Sheet1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1505343354267');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-                
+
                 <p>Looking at the differences in cancer rates among young (age 30-34) white women in different states, we see that there is quite a large range: from 32 per 100,000 to 3,240 per 100,000. The states with the highest rates are California, Texas, and New York -- with around 2-3 percent of white women in their early 30s being diagnosed with breast cancer. </p>
                 <p>It's natural to ask why this might be, but not easy to answer. A county level or other more granular data about the geography of these cancer rates might help shed more light on this. I also wonder if there could be some sort of diagnosing bias -- that is, that the cancer rates aren't necessarily this different but rather there is a higher rate of diagnosis in certain states due to wealth or quality of doctors or some other factors.</p>
-                
+
                 <h2>Visualization 4</h2>
                 <img src="breast_cancer_white_females_by_age.png" alt="White Female Breast Cancer by Age" style="width:1000px;height:687px;">
                 <p>The Tableau visualization showed us that there seemed to be a pretty wide spread in breast cancer rates among 30-34 year old females in different states. This visualization shows that in fact, this is a relatively low spread compared to the spread of other age groups. White female 55-59 and 60-64 year olds have the widest range of breast cancer rates in different states. We also see that the pattern made by the tops of the violins looks quite similar to the breast cancer section of Visualization 1.</p>
                 <p>This visualization was partly an experiment with Seaborn and violin plots. I am not loving the violin plots here, but nevertheless wanted to present this one here, and discuss some of the reasons I think it does not work so well. First because there is such a wide spread for most of the age groups, we don't really see much color in the violins, so aesthetically, it is not too pleasing. Second, there obviously are not rates going below 0, so it is somewhat confusing that the bottoms of the violins go below 0. Third, because there would be at most 51 points per column (one for each state + DC), I think a scatter plot (technically known as a "strip plot" when one variable is categorical) would provide a helpful amount of additional information. </p>
-            
+
                 <h2>Visualization 5</h2>
                 <img src="breast_cancer_females_60_64_by_race.png" alt="Female Age 60-64 Breast Cancer by Race" style="width:1000px;height:687px;">
                 <p>In addition to investigating the spread of female breast cancer rates for each state by age group, I thought it might be illuminating to investigate this by race for the 60-64 age group. While we saw from Visualization 2 that in New York, white women had much higher breast cancer rates, I thought it was possible that this could be different in different states; this was not really the case. Overall, the rates for female breast cancer for 60-64 year olds were higher for white people than for other races.</p>
@@ -48,9 +48,9 @@
             </div>
         </div>
         </div>
-        
+
         <script src="//code.jquery.com/jquery-1.10.2.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
-        <script src="/site.js"></script>
+        <script src="../../scripts/site.js"></script>
     </body>
 </html>
