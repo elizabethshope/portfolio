@@ -3,7 +3,7 @@ function init () {
 }
 
 function load_hw5 () {
-    $("#hw5").load("/portfolio/homework/rmdhw5.html");
+    $("#hw5").load("/portfolio/anly503/homework/rmdhw5.html");
 }
 
 function initFoundation () {
