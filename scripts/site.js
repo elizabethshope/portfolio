@@ -1,9 +1,5 @@
 function init () {
-    $("#header").load("/portfolio/views/shared/header.html #headerView", initFoundation);
-}
-
-function load_hw5 () {
-    $("#hw5").load("/portfolio/anly503/homework/rmdhw5.html");
+    $("#header").load("/views/shared/header.html #headerView", initFoundation);
 }
 
 function initFoundation () {
@@ -11,4 +7,3 @@ function initFoundation () {
 }
 
 $(init);
-$(load_hw5);
