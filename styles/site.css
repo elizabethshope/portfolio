@@ -19,8 +19,12 @@
 }
 
 .hero-section .hero-section-text {
-  color: #fefefe;
-  text-shadow: 1px 1px 2px #0a0a0a;
+    color: #fefefe;
+    text-shadow: 1px 1px 2px #0a0a0a;
+}
+
+.raleway {
+    font-family: 'Raleway', sans-serif;
 }
 
 .menu-bg {
@@ -37,6 +41,7 @@
 
 .my-menu-text {
     color: #F8F8FF;
+    font-family: 'Raleway', sans-serif; 
 }
 
 .my-menu-text a {
