@@ -56,6 +56,44 @@
     top: 8px;
 }
 
+.light-grey-bg {
+    background-color: #EFEFEE;
+}
+
+.sky-blue-bg {
+    background-color: #3C82CE;
+}
+
+.raleway-large {
+    font-family: 'Raleway', sans-serif;
+    font-size: 40px;
+    font-weight: 300;
+    color: #505C68;
+}
+
+.copyright {
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    position: relative;
+    top: 20%;
+}
+
+.social i {
+    padding: 0px 10px 0px 10px;
+    font-size: 30px;
+}
+
+.social a {
+    color: white
+}
+
+.social {
+    text-align: right;
+    color: white
+}
+
 #primary-nav {
     color: #F8F8FF;
 }
