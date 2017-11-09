@@ -41,7 +41,7 @@
 
 .my-menu-text {
     color: #F8F8FF;
-    font-family: 'Raleway', sans-serif; 
+    font-family: 'Raleway', sans-serif;
 }
 
 .my-menu-text a {
@@ -63,6 +63,10 @@
 
 .light-grey-bg {
     background-color: #EFEFEE;
+}
+
+.light-blue-bg {
+    background-color: #e8f2fc;
 }
 
 .sky-blue-bg {
