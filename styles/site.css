@@ -80,6 +80,27 @@
     color: #505C68;
 }
 
+.thumbnail-home h3 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #505C68;
+    text-align: center;
+}
+
+.thumbnail-home p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: #505C68;
+    text-align: center;
+    padding: 0% 5%;
+}
+
+.thumbnail-home img {
+    padding: 5% 5% 5% 5%;
+}
+
 .copyright {
     font-family: 'Raleway', sans-serif;
     font-size: 18px;
