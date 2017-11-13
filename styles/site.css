@@ -133,12 +133,14 @@
     font-family: 'Raleway', sans-serif;
     font-size: 32px;
     font-weight: 700;
+    color: #505C68;
 }
 
 .viz p {
     font-family: 'Raleway', sans-serif;
     font-size: 18px;
     font-weight: 300;
+    color: #505C68;
 }
 
 #primary-nav {
