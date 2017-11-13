@@ -14,7 +14,7 @@
     <div id="header"></div>
     <div class="grid-container">
         <div class="grid-x">
-            <div>
+            <div class="viz">
                 <a href="https://plot.ly/~eshope/4/?share_key=GqgMB4J6lBqoZRdGEYImzp"
                 target="_blank" title="stacked-area-plot-hover"
                 style="display: block; text-align: center; left: 25%">
@@ -22,12 +22,33 @@
                 alt="stacked-area-plot-hover" style="max-width: 100%;width: 600px;"  width="600"
                 onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
                 <script data-plotly="eshope:4" sharekey-plotly="GqgMB4J6lBqoZRdGEYImzp" src="https://plot.ly/embed.js" async></script>
-            </div>
-            <div class="viz">
-                <h2>About This Visualization</h2>
-                <p>Testing testing testing</p>
-            </div>
+                <br />
 
+                <h2>About This Visualization</h2>
+                <p>This interactive Plotly visualization shows energy generation in the United States over time (1990-2015)
+                    for different sources and overall. We can see that overall energy generation in the United States has
+                    increased from roughly 12 billion Mwh in 1990 to 16 billion Mwh in 2015. The composition of the
+                    energy generation mix has changed over time, though:</p>
+                <ul>
+                    <li>Through 2007, coal accounted for roughly half of U.S. energy generation, peaking in 2007 at more than 8 billion Mwh.
+                        Since then, coal use has dropped, and as of 2015, the United States generated only around 5.4 billion Mwh from
+                        coal (around one third of total generation).</li>
+                    <li>Natural gas has seen the biggest increase volume-wise as a source of energy generation, growing from
+                        1.5 billion Mwh in 1990 to 5.3 billion Mwh in 2015.</li>
+                    <li>Percentage-wise, wind and solar have been the real winners. While they still represent only a fairly
+                        small fraction of total U.S. energy generation as of 2015, both sources have grown by more than 6,000 percent
+                        since 1990. For solar, much of this gain has occurred since 2007. This is an encouraging sign that we are
+                        moving towards a clean energy future.</li>
+                </ul>
+                <h2>References</h2>
+                <p>You can find a link to the cleaned data I used for this visualization
+                    <a href="https://github.com/elizabethshope/visualizations/blob/master/energy_gen_plotly/energy_generation_by_source_year.csv" target="_blank">here</a>, and to the Python code I used to
+                    make the Plotly visualization <a href="https://github.com/elizabethshope/visualizations/blob/master/energy_gen_plotly/energygen_stacked_area_chart_plotly.py" target="_blank">here</a>.
+                    The original data (uncleaned) is the "Net Generation by State by Type of Producer by Energy Source" document on the
+                    <a href="https://www.eia.gov/electricity/data/state/" target="_blank">the U.S. Energy Information Administration</a>
+                    website. I downloaded the data on September 17, 2017 at which point it included years 1990-2015;
+                    the data has been updated since then.</p>
+            </div>
         </div>
     </div>
     <div id="footer"></div>
