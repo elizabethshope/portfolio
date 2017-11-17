@@ -129,6 +129,10 @@
     color: white
 }
 
+.viz div {
+    width: 100%;
+}
+
 .viz h2 {
     font-family: 'Raleway', sans-serif;
     font-size: 32px;
