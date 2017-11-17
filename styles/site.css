@@ -153,6 +153,11 @@
     text-align: left;
 }
 
+.viz iframe {
+    margin: auto;
+    width: 90%;
+}
+
 #primary-nav {
     color: #F8F8FF;
 }
