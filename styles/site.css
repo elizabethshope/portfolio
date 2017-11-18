@@ -129,6 +129,10 @@
     color: white
 }
 
+.center {
+    text-align: center;
+}
+
 .viz {
     width: 100%;
 }
