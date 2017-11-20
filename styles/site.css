@@ -107,9 +107,12 @@
     font-size: 18px;
     font-weight: 500;
     color: white;
-    position: relative;
-    top: 20%;
+    vertical-align: middle;
     margin-bottom: 0;
+}
+
+.footer-padding {
+    padding: 0.55em 0;
 }
 
 .spaced-fat {
