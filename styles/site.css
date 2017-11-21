@@ -18,18 +18,8 @@
           justify-content: center;
 }
 
-.hero-section-text h1 {
-    color: #fefefe;
-    text-shadow: 1px 1px 2px #0a0a0a;
-}
-
-.hero-section-text h5 {
-    color: #fefefe;
-    text-shadow: 1px 1px 2px #0a0a0a;
-}
-
 .my-hero-text h1 {
-    font-weight: 300;
+    font-weight: 200;
     color: #fefefe;
     text-shadow: 1px 1px 2px #0a0a0a;
     position: absolute;
