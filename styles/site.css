@@ -171,6 +171,30 @@
     width: 100%;
 }
 
+.portfolio-piece h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    line-height: 2;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #505C68;
+}
+
+.portfolio-piece p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: #505C68;
+    margin: 0 0 30px 0;
+    max-width: 600px;
+}
+
+.portfolio-piece img {
+    width: 150px;
+    margin: 10px 0 30px 0;
+}
+
+
 #primary-nav {
     color: #F8F8FF;
 }
