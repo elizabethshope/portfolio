@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <title>Capital Bikeshare Hourly Viz | Elizabeth Shope</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="/styles/site.css">
+    <link rel="stylesheet" type="text/css" href="/foundation-icons/foundation-icons.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>
+    <div id="header"></div>
+    <div class="my-hero-text">
+        <h1>Data Visualization</h1>
+    </div>
+    <div class="grid-container">
+        <div class="grid-x">
+            <div class="viz">
+                <a href="https://plot.ly/~eshope/34/?share_key=Q3PMQdCWmTrFd3Woqyq7Ab" target="_blank" title="bikeshare-hourly-trips-with-slider" style="display: block; text-align: center;">
+                    <img src="https://plot.ly/~eshope/34.png?share_key=Q3PMQdCWmTrFd3Woqyq7Ab" alt="bikeshare-hourly-trips-with-slider" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" />
+                </a>
+                <script data-plotly="eshope:34" sharekey-plotly="Q3PMQdCWmTrFd3Woqyq7Ab" src="https://plot.ly/embed.js" async></script>
+
+                <br />
+
+                <h2>About This Visualization</h2>
+                <p>This interactive Plotly visualization shows hourly Capital Bikeshare trips for 3 different Sunday through Saturday weeks:
+                    July 17-23, 2016; September 11-17, 2016; and January 22-28, 2017. There are several patterns that emerge:</p>
+                <ul>
+                    <li>In all three of the weeks, on Monday through Friday, we see peaks at 8 am and 5 pm -- at typical morning and
+                        evening commuting hours. For the most part, the evening commute peak is higher than the morning commute peak.
+                        Perhaps this is because people are less concerned about getting sweaty after work, or because more bikes are
+                        available downtown at the end of the day (frequently in the mornings, all docks in residential areas are empty).
+                        It's also possible that there are the same number of commuters in the evening but a higher number of tourists
+                        riding at that time.</li>
+                    <li>The January 22-28 week, unsurprisingly, has the fewest trips per hour at almost all dates and times.
+                        The cold weather deters people from riding bikes.</li>
+                    <li>Some variation is likely a result of weather. For example, on Monday, July 18, 2016 and January 23, 2017,
+                        it was raining, and trips were relatively low during those days. On Wednesday, September 14, the high temperature
+                        was extremely high for September at 95 degrees F; the evening peak on that day was somewhat lower than
+                        the evening commute peak on other weekdays that week.</li>
+                </ul>
+                <h2>References</h2>
+                <p>You can find a link to the Python code I used to make the Plotly visualization
+                    <a href="https://github.com/elizabethshope/visualizations/blob/master/bikeshare_plotly/bikeshare_timeseries_plotly.py" target="_blank">here</a>.
+                    The data I used for this visualization is the Q3 2016 and Q1 2017 data from
+                    <a href="" target="_blank"> Capital Bikeshare</a>. The files are too large to include on my Github or website -- as large as 85 MB uncompressed.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="footer"></div>
+
+
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+    <script src="/scripts/site.js"></script>
+</body>
+</html>
