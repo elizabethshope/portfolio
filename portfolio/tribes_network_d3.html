@@ -3,8 +3,8 @@
 <head>
     <title>Tribe Network Viz | Elizabeth Shope</title>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css">
-    <link rel="stylesheet" type="text/css" href="/styles/site.css">
-    <link rel="stylesheet" type="text/css" href="/foundation-icons/foundation-icons.css">
+    <link rel="stylesheet" type="text/css" href="../styles/site.css">
+    <link rel="stylesheet" type="text/css" href="../foundation-icons/foundation-icons.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <meta charset="utf-8">
     <meta name="description" content="">
@@ -19,12 +19,29 @@
         <div class="grid-x">
             <div class="viz">
                 <h2>Tribe Network</h2>
-                <iframe src="/embeddings/tribe_network/" height="600"> </iframe>
+                <iframe src="../embeddings/tribe_network/" height="600"> </iframe>
                 <h2>About This Visualization</h2>
-                <p>Description goes here.</p>
+
+                <figure style="float: right; text-align: center; font-style: italic; font-size: smaller; text-indent: 0; border: thin silver solid; margin: 0.5em; padding: 0.5em;">
+                    <figcaption>K. E. Read 1954 Tribe Network Diagram</figcaption>
+                    <img src="../images/tribe-network-original.png" alt="K. E. Read tribe network diagram" style="height: 300px;">
+                </figure>
+                <p>
+                    In a 1954 paper entitled <a href="https://www.jstor.org/stable/3629074" target="_blank">Cultures of the Central Highlands, New Guinea</a>,
+                    K. E. Read included a diagram of 16 tribes in the region, and their political ties and oppositions. While it was a reasonable diagram,
+                    I thought that now, more than 53 years later, it could use a colorful interactive update.
+                    In this interactive Network D3 visualization, the nodes are sized by betweenness, the green edges represent
+                    political ties, and the red edges represent opposition.
+                </p>
 
                 <h2>References and Credits</h2>
-                <p>References and credits go here.</p>
+                <p>You can find the edge list <a href="https://github.com/elizabethshope/visualizations/blob/master/tribes_network_d3/soc-tribes.edges" target="_blank">here</a>,
+                    the node list <a href="https://github.com/elizabethshope/visualizations/blob/master/tribes_network_d3/tribeNames.csv" target="_blank">here</a>, and
+                    the R code for making the visualization <a href="https://github.com/elizabethshope/visualizations/blob/master/tribes_network_d3/tribes_networkD3.R" target="_blank">here</a>.
+                    The research for the network came from the 1954 paper by K. E. Read entitled <a href="https://www.jstor.org/stable/3629074" target="_blank">Cultures of the Central Highlands, New Guinea</a>,
+                    and was published in the Southwestern Journal of Anthropology, Vol. 10, No. 1 (Spring, 1954), pp. 1-43. I downloaded the edge list from
+                    <a href="http://networkrepository.com/soc-tribes.php" target="_bank">networkrepository.com</a>, and manually determined which numbered nodes corresponded to which tribe names
+                    like a game of Sudoku.</p>
             </div>
         </div>
     </div>
@@ -33,6 +50,6 @@
 
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
-    <script src="/scripts/site.js"></script>
+    <script src="../scripts/site.js"></script>
 </body>
 </html>
