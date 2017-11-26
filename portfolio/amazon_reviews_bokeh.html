@@ -5,8 +5,8 @@
         <meta charset="utf-8">
         <title>Amazon Reviews Star Portions Viz | Elizabeth Shope</title>
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css">
-        <link rel="stylesheet" type="text/css" href="/styles/site.css">
-        <link rel="stylesheet" type="text/css" href="/foundation-icons/foundation-icons.css">
+        <link rel="stylesheet" type="text/css" href="../styles/site.css">
+        <link rel="stylesheet" type="text/css" href="../foundation-icons/foundation-icons.css">
         <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
         <meta charset="utf-8">
         <meta name="description" content="">
@@ -34,10 +34,27 @@
                 </div>
                 <div class="viz">
                     <h2>About This Visualization</h2>
-                    <p>Description goes here.</p>
+                    <p>This interactive Bokeh visualization shows the portion of 1, 2, 3, 4 and 5 star reviews for a set of different
+                        Amazon product categories: Clothing Shoes and Jewelry, Home and Kitchen, Electronics, Video Games, Amazon Instant Video,
+                        and Digital Music. I was aware that there tend of be a large portion of 5 star reviews generally, but was curious
+                        if the breakdown was the same across product categories. Understanding the significance of different ratings is
+                        important both for Amazon and for shoppers. In fact, we see that Digital Music and Amazon Instant Video have the
+                        highest portion of 5-star reviews (0.745 and 0.646 of reviews are 5 star reviews in the two categories, respectively).
+                        The Video Games category has the lowest portion of 5-star reviews (0.536). Perhaps Digital Music has such a high
+                        portion of 5-star reviews because people can listen to clips or full versions of the song before buying, so they are likely
+                        to only buy a song or album if they know they will like it. For video games, it may be harder to get a clear sense
+                        of what a game is like before purchasing it, and it is something people want to play for an extended amount of time,
+                        and thus have relatively high standards.</p>
 
                     <h2>References and Credits</h2>
-                    <p>References and credits go here.</p>
+                    <p>You can find the clean processed data I used for making the visualization
+                        <a href="https://github.com/elizabethshope/visualizations/blob/master/amazon_reviews_bokeh/Amazon_Reviews_Star_Fractions.csv" target="_blank">here</a>
+                        and the Python code for making the visualization
+                        <a href="https://github.com/elizabethshope/visualizations/blob/master/amazon_reviews_bokeh/amazon_reviews_bokeh.py" target="_blank">here</a>.
+                        The original data came from <a href="http://jmcauley.ucsd.edu/data/amazon/" target="_blank">the website of Julian McAuley (UCSD)</a>.
+                        I specifically used the "ratings only" data for the categories of Clothing Shoes and Jewelry, Home and Kitchen, Electronics, Video Games, Amazon Instant Video, and Digital Music.
+                        These files are too large to include here, but the code I used for processing the data can also be found
+                        <a href="https://github.com/elizabethshope/visualizations/blob/master/amazon_reviews_bokeh/data_processing.py" target="_blank">on my Github</a>.</p>
                 </div>
             </div>
         </div>
@@ -81,6 +98,6 @@
         </script>
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
-        <script src="/scripts/site.js"></script>
+        <script src="../scripts/site.js"></script>
     </body>
 </html>
