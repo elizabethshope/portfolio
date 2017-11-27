@@ -21,10 +21,39 @@
                 <h2>Coal Plants, Refineries and Cancer in the Continental United States</h2>
                 <iframe src="/embeddings/cancer_map/" height="540"> </iframe>
                 <h2>About This Visualization</h2>
-                <p>Description goes here.</p>
+                <p>
+                    In this visualization, you can look at Non-Hodgkin Lymphoma rates or overall cancer rates in counties for which
+                    data is published in the United States. Overlaid on that are power plants over 1000 MW whose primary fuel source is coal,
+                    as well as petroleum refineries. I chose this data because petroleum refineries produce benzene, and
+                    <a href="https://ehp.niehs.nih.gov/1408307/" target="_blank">studies have found benzene exposure to increase Non-Hodgin Lymphoma rates</a>.
+
+                    There are an unfortunate number of counties without published data for Non-Hodgkin Lymphoma rates, so it is hard
+                    to tell if there are any significant trends. However, note that in Louisiana, where there is an especially high density
+                    of petroleum refineries, there is also high rates of Non-Hodgkin Lymphoma.
+                </p>
 
                 <h2>References and Credits</h2>
-                <p>References and credits go here.</p>
+                <p>
+                    The code for producing this visualization is
+                    <a href="https://github.com/elizabethshope/visualizations/blob/master/refineries_cancer_leaflet/refineries_cancer_leaflet.R" target="_blank">here</a>.
+                    There are multiple data files for this visualization, all of which can be found
+                    <a href="https://github.com/elizabethshope/visualizations/tree/master/refineries_cancer_leaflet" target="_blank">here</a>.
+                    Original data and image sources:
+                </p>
+                <ul>
+                    <li>The Petroleum_Refineries_2017 and PowerPlants_US_201707 shapefiles were from the
+                        <a href="https://www.eia.gov/maps/layer_info-m.php" target="_blank">U.S. Energy Information Administration</a>.
+                    </li>
+                    <li>The cb_2016_us_county_20m shapefile was from the
+                        <a href="https://www.census.gov/geo/maps-data/data/cbf/cbf_counties.html" target="_blank">United States Census Bureau</a>.
+                    </li>
+                    <li>The Non-Hodgkin Lymphoma and overall cancer rate data (processed versions on my site: nh_lymphoma.csv and CancerCountyFIPS.csv) came from the
+                        <a href="https://www.statecancerprofiles.cancer.gov/incidencerates/index.php" target="_blank">State Cancer Profiles website</a>.
+                    </li>
+                    <li>The oil barrel icon used to represent the refineries is by Aleksandr Vector from The Noun Project, and the power plant icon
+                        is by Andrejs Kirma from The Noun Project.
+                    </li>
+                <ul>
             </div>
         </div>
     </div>
