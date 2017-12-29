@@ -119,6 +119,10 @@ input {
     display: none;
 }
 
+#contact-link li {
+    padding-right: 0;
+}
+
 .header li {
     float: left;
     padding: 1rem 1rem;
