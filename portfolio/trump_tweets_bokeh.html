@@ -18,48 +18,50 @@
         </script>
     </head>
     <body>
-        <div id="header"></div>
-        <div class="my-hero-text">
-            <h1>Data Visualization</h1>
+        <div class="viz-header my-gradient">
+            <div class="centered-section">
+                <div class="viz-nav">
+                    <a href="/">Home</a>
+                </div>
+                <div class="viz-title">
+                    <h1>Data Visualization</h1>
+                </div>
+            </div>       
         </div>
-        <div class="grid-container">
-            <div class="grid-x">
-                <div class="viz">
-                    <h2>Trump Twitter Associations Network</h2>
-                </div>
-                <div style="position: relative; left: 85px;">
-                    <div class="bk-root">
-                        <div class="bk-plotdiv" id="8716acdf-78fe-4188-bfba-7a40e1ce23e4"></div>
-                    </div>
-                </div>
-                <div class="viz">
-                    <h2>About This Visualization</h2>
-                    <p>
-                        This interactive Bokeh visualization shows Twitter contacts that Donald Trump associates with each other. To make the visualization,
-                        I extracted all tweets that had two or more mentions. Then, I put all pairs of accounts mentioned in a single tweet into a list,
-                        removing pairs that had an account that appeared only once. I used these pairs of mentions as an edge list for a weighted undirected
-                        network; the accounts that were mentioned were the nodes, they had an edge between them if they were mentioned in the same tweet,
-                        and the weight of the edge was the number of tweets in which they were both mentioned. I then clustered the nodes using the Louvain
-                        clustering algorithm.
-                    </p>
-                    <p>
-                        For the visualization, I organized the nodes by cluster; color is used to define the clusters. Darker cells within a color (and outside
-                        of the colors) represent more tweets in which Donald Trump has mentioned both Twitter accounts. We don't learn anything terribly surprising
-                        here, but can see that Trump sometimes mentions multiple news entities together, as several news organizations ended up in a cluster together.
-                        He also associates a number of government agencies and administrations.
-                    </p>
-
-                    <h2>References and Credits</h2>
-                    <p>
-                        You can find the clean data I used for making this visualization
-                        <a href="https://github.com/elizabethshope/visualizations/blob/master/trump_tweet_network_bokeh/trump_tweets_nov2016_oct2017.csv" target="_blank">here</a>.
-                        It is all of his tweets from November 1, 2016 through October 31, 2017, exported from the
-                        <a href="http://www.trumptwitterarchive.com/archive" target="_blank">Trump Twitter Archive website</a>.
-                        The Python code I used for processing the data and making the visualization is
-                        <a href="https://github.com/elizabethshope/visualizations/blob/master/trump_tweet_network_bokeh/trump_tweet_network_bokeh.py" target="_blank">on my Github</a>.
-                    </p>
-                </div>
+        <div class="viz centered-section">
+            <h2>Trump Twitter Associations Network</h2>
+        </div>
+        <div style="position: relative;">
+            <div class="bk-root" style="width: 100%; margin: auto">
+                <div class="bk-plotdiv" id="8716acdf-78fe-4188-bfba-7a40e1ce23e4" style="width: 100%; margin: auto"></div>
             </div>
+        </div>
+        <div class="viz centered-section">
+            <h2>About This Visualization</h2>
+            <p>
+                This interactive Bokeh visualization shows Twitter contacts that Donald Trump associates with each other. To make the visualization,
+                I extracted all tweets that had two or more mentions. Then, I put all pairs of accounts mentioned in a single tweet into a list,
+                removing pairs that had an account that appeared only once. I used these pairs of mentions as an edge list for a weighted undirected
+                network; the accounts that were mentioned were the nodes, they had an edge between them if they were mentioned in the same tweet,
+                and the weight of the edge was the number of tweets in which they were both mentioned. I then clustered the nodes using the Louvain
+                clustering algorithm.
+            </p>
+            <p>
+                For the visualization, I organized the nodes by cluster; color is used to define the clusters. Darker cells within a color (and outside
+                of the colors) represent more tweets in which Donald Trump has mentioned both Twitter accounts. We don't learn anything terribly surprising
+                here, but can see that Trump sometimes mentions multiple news entities together, as several news organizations ended up in a cluster together.
+                He also associates a number of government agencies and administrations.
+            </p>
+
+            <h2>References and Credits</h2>
+            <p>
+                You can find the clean data I used for making this visualization
+                <a href="https://github.com/elizabethshope/visualizations/blob/master/trump_tweet_network_bokeh/trump_tweets_nov2016_oct2017.csv" target="_blank">here</a>.
+                It is all of his tweets from November 1, 2016 through October 31, 2017, exported from the
+                <a href="http://www.trumptwitterarchive.com/archive" target="_blank">Trump Twitter Archive website</a>.
+                The Python code I used for processing the data and making the visualization is
+                <a href="https://github.com/elizabethshope/visualizations/blob/master/trump_tweet_network_bokeh/trump_tweet_network_bokeh.py" target="_blank">on my Github</a>.
+            </p>
         </div>
         <div id="footer"></div>
 

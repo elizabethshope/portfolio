@@ -9,64 +9,358 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script src="https://d3js.org/d3.v4.min.js"></script>
 </head>
 <body>
-    <div id="header"></div>
-    <div class="my-hero-text">
-        <h1>Elizabeth Shope</h1>
-        <h5>Data Scientist</h5>
+    <div 
+        id="header"
+        class="header"
+    >
+        <div class="header-inner centered-section">
+            <nav role="navigation">
+                <div id="menuToggle">
+                    <input type="checkbox" />
+                    <div class="title" id="top-link">Elizabeth Shope</div>
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul id="menu">
+                        <a id="visualizations-link" class="eliz-page-link eliz-hoverable"><li>Visualizations</li></a>
+                        <a id="about-link" class="eliz-page-link eliz-hoverable"><li>About</li></a>
+                        <a id="contact-link" class="eliz-page-link eliz-hoverable"><li>Contact</li></a>
+                    </ul>
+                </div>    
+            </nav>
+        </div>
     </div>
-    <div class="light-blue-bg raleway-large">
-        <div class="grid-container">
-            <div class="grid-x">
-                <div class="cell">
-                    <p>Welcome to my data visualization portfolio website! My name is Elizabeth, and I am a data scientist and
-                      environmental and social justice activist. Please check out my <a href="portfolio/">portfolio</a>.
+
+    <div 
+        id="top-section"
+        class="top-section my-gradient section"
+    >
+        <div class="centered-section">
+            <h1>Elizabeth Shope</h1>
+            <canvas width=800 height=500></canvas>
+        </div>       
+    </div>
+
+    <div 
+        id="visualizations-section"
+        class="centered-section portfolio-section section"
+    >
+        <!-- <h2>Visualizations</h2> -->
+        <ul>
+            <li class="portfolio-piece plotly-election">
+                <a 
+                    class="portfolio-label"
+                    href="portfolio/election_results_plotly.html"
+                    alt="Plotly Election Viz Thumbnail"
+                >
+                    <h2>U.S. Presidential Elections 1996-2016</h2>
+                    <p>This visualization shows the evolving maps of state winners in the U.S. presidential general elections from 1996-2016. I built this multi-map visualization using Plotly.</p>
+                </a>
+            </li>
+
+            <li class="portfolio-piece plotly-energy">
+                <a 
+                    class="portfolio-label"
+                    href="portfolio/us_energy_generation_plotly.html"
+                    alt="Plotly Energy Generation Viz Thumbnail"
+                >
+                    <h2>Electricity Generation Sources Over Time</h2>
+                    <p>This stacked barplot visualization shows how the mix of sources with which the United States generates electricity has evolved over time. I built this visualization using Plotly.</p>
+                </a>
+            </li>   
+
+            <li class="portfolio-piece ggplot2-cancer">
+                <a 
+                    class="portfolio-label"
+                    href="portfolio/cancer_ggplot2.html"
+                    alt="ggplot2 Cancer Viz Thumbnail"
+                >
+                    <h2>Cancer Incidence and Mortality in the United States</h2>
+                    <p>This compound visualization, built with ggplot2, shows the breakdown of cancer rates by year and gender from 1999-2014, 2014 cancer rates by gender and race, and 2014 cancer rates by gender and leading site.</p>
+                </a>
+            </li>
+
+            <li class="portfolio-piece plotly-bikeshare">
+                <a 
+                    class="portfolio-label"
+                    href="portfolio/capital_bikeshare_plotly.html"
+                    alt="Plotly Bikeshare Time Series Viz Thumbnail"
+                >
+                    <h2>Capital Bikeshare Hourly Usage</h2>
+                    <p>This time series visualization, built with Plotly, shows hourly trip counts over the course of three different weeks. You can use a slider and other tools to zoom in on different portions of time.</p>
+                </a>
+            </li>
+
+            <li class="portfolio-piece ggplot2-bikeshare">
+                <a 
+                    class="portfolio-label"
+                    href="portfolio/bikeshare_ggplot2.html"
+                    alt="ggplot2 Bikeshare Registered vs. Casual Use Viz Thumbnail"
+                >
+                    <h2>Capital Bikeshare Resident vs. Tourist Riders</h2>
+                    <p>This set of visualizations, built with ggplot2, shows how resident vs. tourist usage of Capital Bikeshare differs. The visualizations use data from September 2016 and consider the number of trips taken each day for the two groups, the average trip lenth each day, and the most frequent stations for starting trips for the two groups.</p>
+                </a>
+            </li>
+
+            <li class="portfolio-piece tableau-education-poverty">
+                <a 
+                    class="portfolio-label"
+                    href="portfolio/poverty_education_tableau.html"
+                    alt="Education Poverty Viz Thumbnail"
+                >
+                    <h2>The Link Between Poverty and Education</h2>
+                    <p>This Tableau story shows the link between poverty and education in the United States. In the U.S. states, there is a strong positive correlation between rates of adults without a high school diploma and poverty rates. This visualization also shows the disparity between education and poverty levels in the North and South.</p>
+                </a>
+            </li>
+
+            <li class="portfolio-piece trump-twitter-network-bokeh">
+                <a 
+                    class="portfolio-label"
+                    href="portfolio/trump_tweets_bokeh.html"
+                    alt="Trump Twitter Network Viz Thumbnail"
+                >
+                    <h2>Trump's Twitter Associations</h2>
+                    <p>This interactive Bokeh visualization shows the Twitter accounts (people and organizations) that Trump associates with each other, by analyzing and visualizing the tweets in which Trump mentions at least two Twitter accounts.</p>
+                </a>
+            </li>
+
+            <li class="portfolio-piece happiness-tableau">
+                <a 
+                    class="portfolio-label"
+                    href="portfolio/world_happiness_tableau.html"
+                    alt="World Happiness Viz Thumbnail"
+                >
+                    <h2>World Happiness Exploration</h2>
+                    <p>This Tableau dashboard shows happiness levels around the world, lets you explore which countries are the happiest and least happy, and see which factors are most correlated with happiness levels.</p>
+                </a>
+            </li>
+
+            <li class="portfolio-piece tribe-network-networkd3">
+                <a
+                    class="portfolio-label"
+                    href="portfolio/tribes_network_d3.html"
+                    alt="Tribe Network Viz"
+                >
+                    <h2>Gahuku-Gama Sub-Tribe Relationship Network</h2>
+                    <p>This interactive NetworkD3 visualization shows the relationships between the 16 Gahuku-Gama sub-tribes
+                        of the central highlands of New Guinea. You can click and drag the nodes to help highlight certain relationships.
                     </p>
+                </a>
+            </li>
+
+            <li class="portfolio-piece squirrel-wordcloud">
+                <a 
+                    class="portfolio-label"
+                    href="portfolio/squirrel_wordcloud.html"
+                    alt="Squirrel Wordcloud Viz Thumbnail"
+                >
+                    <h2>Squirrel Wordcloud</h2>
+                    <p>This silly squirrel wordcloud shows the words most frequently used in a non-scientific squirrel blog. I hope it makes you smile!</p>
+                </a>
+            </li>
+
+            <li class="portfolio-piece leaflet-cancer-refineries">
+                <a 
+                    class="portfolio-label"
+                    href="portfolio/cancer_powerplant_refinery_map.html"
+                    alt="Cancer Powerplants Refineries Viz Thumbnail"
+                >
+                    <h2>Coal Plants, Refineries and Cancer</h2>
+                    <p>This choropleth map visualization, built with Leaflet, shows cancer rates or Non Hodgkin Lymphoma cancer rates by county, along with information about petroleum refineries and large coal-fired power plants.</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div 
+        id="about-section"
+        class="about-me section"
+    >
+        <div class="centered-section">
+            <!-- <h2 class="raleway">About</h2> -->
+            <div class="about-container">
+                <div class="about-text-1">
+                    <p>I am a data scientist finishing an M.S. in data science at Georgetown University. I spent the first part of my career focused directly on environmental policy and advocacy.</p> 
+                </div>
+                <div class="about-img-1">
+                    <img src="images/eshope-nrdc.jpeg">
+                </div>
+            </div>
+            <div class="about-container-2">
+                <div class="about-img-2">
+                    <img src="images/eshope-headshot.jpg">
+                </div>
+                <div class="about-text-2">
+                    <p>Now, I use data science to help advance environmental, social justice, and progressive causes.</p> 
                 </div>
             </div>
         </div>
     </div>
-    <div class="grid-container spaced-fat">
-        <div class="grid-x">
-            <div class="large-auto cell viz-thumbnail">
-                <a href="portfolio/cancer_ggplot2.html"><h3>Cancer Incidence and Mortality</h3></a>
-                <p>Learn more about cancer rates and their association with gender, race, and leading site,
-                    and how they have evolved over time.</p>
-                <a href="portfolio/cancer_ggplot2.html"><img src="images/ggplot2-cancer.png" alt="ggplot2 Cancer Viz Thumbnail"></a>
-            </div>
-            <div class="large-auto cell viz-thumbnail">
-                <a href="portfolio/election_results_plotly.html"><h3>Presidential Elections 1996-2016</h3></a>
-                <p>This visualization shows the evolving maps of state winners in the U.S. presidential
-                    general elections from 1996-2016.</p>
-                <a href="portfolio/election_results_plotly.html"><img src="images/plotly-election-square.png" alt="Plotly Election Viz Thumbnail"></a>
-            </div>
-            <div class="large-auto cell viz-thumbnail">
-                <a href="portfolio/cancer_powerplant_refinery_map.html"><h3>Coal Plants, Refineries and Cancer</h3></a>
-                <p>See cancer rates or Non Hodgkin Lymphoma cancer rates by county, overlaid width
-                    large coal power plant and petroleum refinery information.</p>
-                <a href="portfolio/cancer_powerplant_refinery_map.html"><img src="images/leaflet-cancer-refineries.png" alt="Cancer Powerplants Refineries Viz Thumbnail"></a>
-            </div>
+
+    <div
+        id="contact-section"
+        class="contact section"
+    >
+        <div class="centered-section">
+            <p class="social">
+                <a class="contact-icon" href="https://twitter.com/eshope" target="_blank"><i class="fi-social-twitter"></i></a>
+                <a class="contact-icon" href="https://www.linkedin.com/in/elizabeth-shope/" target="_blank"><i class="fi-social-linkedin"></i></a>
+                <a class="contact-icon" href="https://github.com/elizabethshope" target="_blank"><i class="fi-social-github"></i></a>
+                <a class="contact-icon" href="mailto:elizabeth.shope@gmail.com" target="_blank"><i class="fi-mail"></i></a>
+            </p>
         </div>
     </div>
-    <div class="light-blue-bg raleway-large">
-        <div class="grid-container">
-            <div class="grid-x">
-                <div class="cell">
-                    <p>I primarily use Python and R to scrape, clean and analyze data. For creating
-                        beautiful data visualizations, I use a wide range of tools and libraries including
-                        ggplot2 (R), Leaflet (R), matplotlib (Python), Bokeh (Python), Tableau, Network D3,
-                        and Plotly.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <div id="footer"></div>
 
 
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
     <script src="scripts/site.js"></script>
+    <script type="text/javascript">
+        const headerElement = document.getElementById('header');
+
+        const scrollIt = element =>
+            window.scrollTo({
+                behavior: 'smooth',
+                left: 0,
+                top: element.offsetTop
+            });
+
+        const addScrollTo = linkAndSection => {
+            linkAndSection.link.addEventListener('click', () =>
+                scrollIt(linkAndSection.section)
+            );
+        };
+
+        const sectionsAndLinks = ['top', 'visualizations', 'about', 'contact'].map(
+            linkName => ({
+                section: document.getElementById(`${linkName}-section`),
+                link: document.getElementById(`${linkName}-link`)
+            })
+        );
+
+        sectionsAndLinks.forEach(addScrollTo);
+        const hightlightOnScreenLink = () => {
+            sectionsAndLinks.forEach(sectionAndLink => {
+                const elTop = sectionAndLink.section.offsetTop;
+                const isOnScreen =
+                    elTop > window.pageYOffset &&
+                    elTop < window.pageYOffset + window.innerHeight;
+                if (isOnScreen) {
+                    sectionAndLink.link.classList.add('active-class');
+                } else {
+                    sectionAndLink.link.classList.remove('active-class');
+                }
+            });
+        };
+
+        const toggleHeaderFixed = () => {
+            if (window.innerHeight < window.pageYOffset + 100) {
+                headerElement.classList.add('stuck-to-top');
+            } else {
+                headerElement.classList.remove('stuck-to-top');
+            }
+        };
+
+        const onScroll = () => {
+            toggleHeaderFixed();
+            hightlightOnScreenLink();
+        };
+
+        document.addEventListener('scroll', onScroll);
+        onScroll();
+
+        // function myFunction() {
+        //     var x = document.getElementById("header");
+        //     if (x.className === "header") {
+        //         x.className += " hamburger";
+        //     } else {
+        //         x.className = "header";
+        //     }
+        // }
+
+        var canvas = document.querySelector("canvas"),
+            context = canvas.getContext("2d"),
+            width = canvas.width,
+            height = canvas.height;
+
+        var simulation = d3.forceSimulation()
+            .force("link", d3.forceLink().id(function(d) { return d.id; }))
+            .force("charge", d3.forceManyBody())
+            .force("center", d3.forceCenter(width / 2, height / 2));
+
+        d3.json("miserables.json", function(error, graph) {
+          if (error) throw error;
+
+          simulation
+              .nodes(graph.nodes)
+              .on("tick", ticked);
+
+          simulation.force("link")
+              .links(graph.links);
+
+          d3.select(canvas)
+              .call(d3.drag()
+                  .container(canvas)
+                  .subject(dragsubject)
+                  .on("start", dragstarted)
+                  .on("drag", dragged)
+                  .on("end", dragended));
+
+          function ticked() {
+            context.clearRect(0, 0, width, height);
+
+            context.beginPath();
+            graph.links.forEach(drawLink);
+            context.strokeStyle = "#fefefe";
+            context.stroke();
+
+            context.beginPath();
+            graph.nodes.forEach(drawNode);
+            context.fillStyle = "#fefefe";
+            context.fill();
+            context.strokeStyle = "#fefefe";
+            context.stroke();
+          }
+
+          function dragsubject() {
+            return simulation.find(d3.event.x, d3.event.y);
+          }
+        });
+
+        function dragstarted() {
+          if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+          d3.event.subject.fx = d3.event.subject.x;
+          d3.event.subject.fy = d3.event.subject.y;
+        }
+
+        function dragged() {
+          d3.event.subject.fx = d3.event.x;
+          d3.event.subject.fy = d3.event.y;
+        }
+
+        function dragended() {
+          if (!d3.event.active) simulation.alphaTarget(0);
+          d3.event.subject.fx = null;
+          d3.event.subject.fy = null;
+        }
+
+        function drawLink(d) {
+          context.moveTo(d.source.x, d.source.y);
+          context.lineTo(d.target.x, d.target.y);
+        }
+
+        function drawNode(d) {
+          context.moveTo(d.x + 3, d.y);
+          context.arc(d.x, d.y, 3, 0, 2 * Math.PI);
+        }
+    </script>
+
 </body>
 </html>
