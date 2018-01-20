@@ -298,7 +298,7 @@
             height = document.documentElement.clientHeight,
             radius = 2.5,
             minDistance = 80,
-            maxDistance = 100,
+            maxDistance = 120,
             minDistance2 = minDistance * minDistance,
             maxDistance2 = maxDistance * maxDistance;
 
@@ -307,46 +307,46 @@
             particles = new Array(n);
 
         for (var i = 0; i < n; ++i) {
-          particles[i] = {
-            x: width * Math.random(),
-            y0: height * Math.random(),
-            v: 0.1 * (Math.random() - 0.5)
-          };
+            particles[i] = {
+                x: width * Math.random(),
+                y0: height * Math.random(),
+                v: 0.1 * (Math.random() - 0.5)
+            };
         }
 
         d3.timer(function(elapsed) {
-          context.clearRect(0, 0, width, height);
+            context.clearRect(0, 0, width, height);
 
-          for (var i = 0; i < n; ++i) {
-            for (var j = i + 1; j < n; ++j) {
-              var pi = particles[i],
-                  pj = particles[j],
-                  dx = pi.x - pj.x,
-                  dy = pi.y - pj.y,
-                  d2 = dx * dx + dy * dy;
-              if (d2 < maxDistance2) {
-                context.globalAlpha = d2 > minDistance2 ? (maxDistance2 - d2) / (maxDistance2 - minDistance2) : 1;
-                context.beginPath();
-                context.moveTo(pi.x, pi.y);
-                context.lineTo(pj.x, pj.y);
-                context.strokeStyle = "#fefefe";
-                context.stroke();
-              }
+            for (var i = 0; i < n; ++i) {
+                for (var j = i + 1; j < n; ++j) {
+                    var pi = particles[i],
+                        pj = particles[j],
+                        dx = pi.x - pj.x,
+                        dy = pi.y - pj.y,
+                        d2 = dx * dx + dy * dy;
+                if (d2 < maxDistance2) {
+                    context.globalAlpha = d2 > minDistance2 ? (maxDistance2 - d2) / (maxDistance2 - minDistance2) : 1;
+                    context.beginPath();
+                    context.moveTo(pi.x, pi.y);
+                    context.lineTo(pj.x, pj.y);
+                    context.strokeStyle = "rgba(255, 255, 255, 0.3)";
+                    context.stroke();
+                }
             }
-          }
+        }
 
-          context.globalAlpha = 1;
+            context.globalAlpha = 1;
 
-          for (var i = 0; i < n; ++i) {
-            var p = particles[i];
-            p.y = p.y0 + elapsed * p.v;
-            if (p.y > height + maxDistance) p.x = width * Math.random(), p.y0 -= height + 2 * maxDistance;
-            else if (p.y < -maxDistance) p.x = width * Math.random(), p.y0 += height + 2 * maxDistance;
-            context.beginPath();
-            context.arc(p.x, p.y, radius, 0, tau);
-            context.fillStyle = "#fefefe";
-            context.fill();
-          }
+            for (var i = 0; i < n; ++i) {
+                var p = particles[i];
+                p.y = p.y0 + elapsed * p.v;
+                if (p.y > height + maxDistance) p.x = width * Math.random(), p.y0 -= height + 2 * maxDistance;
+                else if (p.y < -maxDistance) p.x = width * Math.random(), p.y0 += height + 2 * maxDistance;
+                context.beginPath();
+                context.arc(p.x, p.y, radius, 0, tau);
+                context.fillStyle = "rgba(255, 255, 255, 0.3)";
+                context.fill();
+            }
         });
         
     </script>
