@@ -285,6 +285,10 @@ nav {
 /* TOP SECTION */
 .top-section {
     height: 100vh;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
 }
 
 .top-section .centered-section {
@@ -304,9 +308,14 @@ nav {
     margin: 0;
 }
 
-canvas {
-    width: 100%
+.canvas-div {
+    width: 100vw;
+    height: 100vh;
 }
+
+/*canvas {
+    width: 100%
+}*/
 
 /* PORTFOLIO */
 .portfolio-section {

@@ -35,14 +35,18 @@
             </nav>
         </div>
     </div>
-
+    <div class=canvas-div>
+        <canvas id="myCanvas"></canvas>
+    </div>
     <div 
         id="top-section"
         class="top-section my-gradient section"
     >
+        
         <div class="centered-section">
             <h1>Elizabeth Shope</h1>
-            <canvas width=800 height=500></canvas>
+            
+            <!-- <img src="images/barplot_crayon.png"> -->
         </div>       
     </div>
 
@@ -50,7 +54,7 @@
         id="visualizations-section"
         class="centered-section portfolio-section section"
     >
-        <!-- <h2>Visualizations</h2> -->
+
         <ul>
             <li class="portfolio-piece plotly-election">
                 <a 
@@ -276,90 +280,75 @@
         document.addEventListener('scroll', onScroll);
         onScroll();
 
-        // function myFunction() {
-        //     var x = document.getElementById("header");
-        //     if (x.className === "header") {
-        //         x.className += " hamburger";
-        //     } else {
-        //         x.className = "header";
-        //     }
-        // }
+        var canvas = document.getElementById("myCanvas");
+        canvas.width = document.documentElement.clientWidth;
+        canvas.height = document.documentElement.clientHeight;
+
+        const resizeCanvas = () => {
+            var canvas = document.getElementById("myCanvas");
+            canvas.width = document.documentElement.clientWidth;
+            canvas.height = document.documentElement.clientHeight;
+        }
+
+        window.addEventListener('resize', resizeCanvas);
 
         var canvas = document.querySelector("canvas"),
             context = canvas.getContext("2d"),
-            width = canvas.width,
-            height = canvas.height;
+            width = document.documentElement.clientWidth,
+            height = document.documentElement.clientHeight,
+            radius = 2.5,
+            minDistance = 80,
+            maxDistance = 100,
+            minDistance2 = minDistance * minDistance,
+            maxDistance2 = maxDistance * maxDistance;
 
-        var simulation = d3.forceSimulation()
-            .force("link", d3.forceLink().id(function(d) { return d.id; }))
-            .force("charge", d3.forceManyBody())
-            .force("center", d3.forceCenter(width / 2, height / 2));
+        var tau = 2 * Math.PI,
+            n = (canvas.width < 500) ? 50 : 100,
+            particles = new Array(n);
 
-        d3.json("miserables.json", function(error, graph) {
-          if (error) throw error;
+        for (var i = 0; i < n; ++i) {
+          particles[i] = {
+            x: width * Math.random(),
+            y0: height * Math.random(),
+            v: 0.1 * (Math.random() - 0.5)
+          };
+        }
 
-          simulation
-              .nodes(graph.nodes)
-              .on("tick", ticked);
+        d3.timer(function(elapsed) {
+          context.clearRect(0, 0, width, height);
 
-          simulation.force("link")
-              .links(graph.links);
+          for (var i = 0; i < n; ++i) {
+            for (var j = i + 1; j < n; ++j) {
+              var pi = particles[i],
+                  pj = particles[j],
+                  dx = pi.x - pj.x,
+                  dy = pi.y - pj.y,
+                  d2 = dx * dx + dy * dy;
+              if (d2 < maxDistance2) {
+                context.globalAlpha = d2 > minDistance2 ? (maxDistance2 - d2) / (maxDistance2 - minDistance2) : 1;
+                context.beginPath();
+                context.moveTo(pi.x, pi.y);
+                context.lineTo(pj.x, pj.y);
+                context.strokeStyle = "#fefefe";
+                context.stroke();
+              }
+            }
+          }
 
-          d3.select(canvas)
-              .call(d3.drag()
-                  .container(canvas)
-                  .subject(dragsubject)
-                  .on("start", dragstarted)
-                  .on("drag", dragged)
-                  .on("end", dragended));
+          context.globalAlpha = 1;
 
-          function ticked() {
-            context.clearRect(0, 0, width, height);
-
+          for (var i = 0; i < n; ++i) {
+            var p = particles[i];
+            p.y = p.y0 + elapsed * p.v;
+            if (p.y > height + maxDistance) p.x = width * Math.random(), p.y0 -= height + 2 * maxDistance;
+            else if (p.y < -maxDistance) p.x = width * Math.random(), p.y0 += height + 2 * maxDistance;
             context.beginPath();
-            graph.links.forEach(drawLink);
-            context.strokeStyle = "#fefefe";
-            context.stroke();
-
-            context.beginPath();
-            graph.nodes.forEach(drawNode);
+            context.arc(p.x, p.y, radius, 0, tau);
             context.fillStyle = "#fefefe";
             context.fill();
-            context.strokeStyle = "#fefefe";
-            context.stroke();
-          }
-
-          function dragsubject() {
-            return simulation.find(d3.event.x, d3.event.y);
           }
         });
-
-        function dragstarted() {
-          if (!d3.event.active) simulation.alphaTarget(0.3).restart();
-          d3.event.subject.fx = d3.event.subject.x;
-          d3.event.subject.fy = d3.event.subject.y;
-        }
-
-        function dragged() {
-          d3.event.subject.fx = d3.event.x;
-          d3.event.subject.fy = d3.event.y;
-        }
-
-        function dragended() {
-          if (!d3.event.active) simulation.alphaTarget(0);
-          d3.event.subject.fx = null;
-          d3.event.subject.fy = null;
-        }
-
-        function drawLink(d) {
-          context.moveTo(d.source.x, d.source.y);
-          context.lineTo(d.target.x, d.target.y);
-        }
-
-        function drawNode(d) {
-          context.moveTo(d.x + 3, d.y);
-          context.arc(d.x, d.y, 3, 0, 2 * Math.PI);
-        }
+        
     </script>
 
 </body>
