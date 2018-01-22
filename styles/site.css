@@ -22,8 +22,8 @@
 
 .my-gradient {
     background: #43cea2;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom right, #37749C, #3C89BB);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom right, #37749C, #3C89BB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to bottom right, #3774bC 30%, #9Cf9eB 100%);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom right, #3774bC 30%, #9Cf9eB 100%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 /* UTILITY ELEMENTS */
@@ -33,7 +33,7 @@
 }
 
 /* HOVER STYlES */
-.eliz-hoverable {
+/*.eliz-hoverable {
     cursor: pointer;
     color: rgba(0, 0, 0, 0.4);
 }
@@ -46,7 +46,7 @@
 
 .active-class {
     color: rgba(0, 0, 1, 0.6);
-}
+}*/
 
 /* HEADER */
 .header {
@@ -85,10 +85,23 @@
     color: white;
 }
 
+.eliz-page-link:hover {
+    font-weight: 700;
+    color: white;
+    transition: all ease-in-out 0.3s;
+}
+
 .stuck-to-top .eliz-page-link {
     margin: 0;
     /*margin-left: 1em;*/
     color: black;
+}
+
+.stuck-to-top .active-class li {
+    color: black;
+    font-weight: 700;
+    text-decoration: underline;
+    transition: all ease-in-out 0.3s;
 }
 
 .header.stuck-to-top {
@@ -306,6 +319,7 @@ nav {
     color: #fefefe;
     bottom: 0;
     margin: 0;
+    text-shadow: 1px 1px 8px rgba(0,0,0,0.2)
 }
 
 .canvas-div {
@@ -373,6 +387,7 @@ nav {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    border: 1px solid black;
 }
 
 .portfolio-piece:before {
@@ -383,9 +398,9 @@ nav {
     right: 0;
     bottom: 0;
     left: 0;
-    opacity: 0.4;
+    opacity: 0.0;
     background-image: linear-gradient(to bottom right,#37749C, #3C89BB);
-    transition: all ease-in-out 0.1s;
+    transition: all ease-in-out 0.3s;
     mix-blend-mode: multiply;
 }
 

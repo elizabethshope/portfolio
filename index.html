@@ -252,10 +252,10 @@
         sectionsAndLinks.forEach(addScrollTo);
         const hightlightOnScreenLink = () => {
             sectionsAndLinks.forEach(sectionAndLink => {
-                const elTop = sectionAndLink.section.offsetTop;
+                const elTop = sectionAndLink.section.offsetTop + window.innerHeight - 100;
                 const isOnScreen =
                     elTop > window.pageYOffset &&
-                    elTop < window.pageYOffset + window.innerHeight;
+                    elTop < window.pageYOffset + sectionAndLink.section.clientHeight;
                 if (isOnScreen) {
                     sectionAndLink.link.classList.add('active-class');
                 } else {
@@ -281,21 +281,16 @@
         onScroll();
 
         var canvas = document.getElementById("myCanvas");
-        canvas.width = document.documentElement.clientWidth;
-        canvas.height = document.documentElement.clientHeight;
 
         const resizeCanvas = () => {
-            var canvas = document.getElementById("myCanvas");
             canvas.width = document.documentElement.clientWidth;
             canvas.height = document.documentElement.clientHeight;
         }
 
+        resizeCanvas();
         window.addEventListener('resize', resizeCanvas);
 
-        var canvas = document.querySelector("canvas"),
-            context = canvas.getContext("2d"),
-            width = document.documentElement.clientWidth,
-            height = document.documentElement.clientHeight,
+        var context = canvas.getContext("2d"),
             radius = 2.5,
             minDistance = 80,
             maxDistance = 120,
@@ -308,14 +303,14 @@
 
         for (var i = 0; i < n; ++i) {
             particles[i] = {
-                x: width * Math.random(),
-                y0: height * Math.random(),
+                x: canvas.clientWidth * Math.random(),
+                y0: canvas.clientHeight * Math.random(),
                 v: 0.1 * (Math.random() - 0.5)
             };
         }
 
         d3.timer(function(elapsed) {
-            context.clearRect(0, 0, width, height);
+            context.clearRect(0, 0, canvas.clientWidth, canvas.clientHeight);
 
             for (var i = 0; i < n; ++i) {
                 for (var j = i + 1; j < n; ++j) {
@@ -324,24 +319,24 @@
                         dx = pi.x - pj.x,
                         dy = pi.y - pj.y,
                         d2 = dx * dx + dy * dy;
-                if (d2 < maxDistance2) {
-                    context.globalAlpha = d2 > minDistance2 ? (maxDistance2 - d2) / (maxDistance2 - minDistance2) : 1;
-                    context.beginPath();
-                    context.moveTo(pi.x, pi.y);
-                    context.lineTo(pj.x, pj.y);
-                    context.strokeStyle = "rgba(255, 255, 255, 0.3)";
-                    context.stroke();
+                    if (d2 < maxDistance2) {
+                        context.globalAlpha = d2 > minDistance2 ? (maxDistance2 - d2) / (maxDistance2 - minDistance2) : 1;
+                        context.beginPath();
+                        context.moveTo(pi.x, pi.y);
+                        context.lineTo(pj.x, pj.y);
+                        context.strokeStyle = "rgba(255, 255, 255, 0.3)";
+                        context.stroke();
+                    }
                 }
             }
-        }
 
             context.globalAlpha = 1;
 
             for (var i = 0; i < n; ++i) {
                 var p = particles[i];
                 p.y = p.y0 + elapsed * p.v;
-                if (p.y > height + maxDistance) p.x = width * Math.random(), p.y0 -= height + 2 * maxDistance;
-                else if (p.y < -maxDistance) p.x = width * Math.random(), p.y0 += height + 2 * maxDistance;
+                if (p.y > canvas.clientHeight + maxDistance) p.x = canvas.clientWidth * Math.random(), p.y0 -= canvas.clientHeight + 2 * maxDistance;
+                else if (p.y < -maxDistance) p.x = canvas.clientWidth * Math.random(), p.y0 += canvas.clientHeight + 2 * maxDistance;
                 context.beginPath();
                 context.arc(p.x, p.y, radius, 0, tau);
                 context.fillStyle = "rgba(255, 255, 255, 0.3)";
