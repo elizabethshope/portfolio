@@ -69,13 +69,14 @@
 }
 
 .header.stuck-to-top .title {
-    flex-grow: 1;
-}
-
-.header.stuck-to-top .title {
     display: block;
     font-weight: 600;
-    text-transform: uppercase;
+    transition: all ease-in-out 0.3s;
+}
+
+.header.stuck-to-top .title:hover {
+    color: #3774bC;
+    transition: all ease-in-out 0.3s;
 }
 
 .eliz-page-link {
@@ -83,24 +84,32 @@
     overflow: hidden;
     font-weight: 400;
     color: white;
+    transition: all ease-in-out 0.3s;
 }
 
-.eliz-page-link:hover {
+#menu a:hover {
     font-weight: 700;
-    color: white;
+    color: #3774bC;
     transition: all ease-in-out 0.3s;
 }
 
 .stuck-to-top .eliz-page-link {
     margin: 0;
-    /*margin-left: 1em;*/
     color: black;
 }
 
-.stuck-to-top .active-class li {
+.stuck-to-top li {
     color: black;
-    font-weight: 700;
+}
+
+.stuck-to-top li:hover {
+    font-weight: 400;
     text-decoration: underline;
+}
+
+.stuck-to-top .active-class li {
+    font-weight: 700;
+    color: #3774bC;
     transition: all ease-in-out 0.3s;
 }
 
@@ -154,6 +163,10 @@ input {
 .stuck-to-top #menuToggle {
     display: flex;
     flex-direction: row;
+}
+
+.spacer {
+    flex-grow: 1;
 }
 
 nav {
@@ -355,9 +368,9 @@ nav {
     min-width: 12rem;
     max-width: 33%;
     height: calc(740px / 3);*/
-    width: calc(94% / 3);
-    padding-bottom: calc(94% / 3);
-    margin: 1%;
+    width: calc(88% / 3);
+    padding-bottom: calc(88% / 3);
+    margin: 2%;
     float: left;
     position: relative;
     display: inline-block;
@@ -366,16 +379,17 @@ nav {
 
 @media screen and (max-width: 800px) {
     .portfolio-piece {
-        width: 48%;
-        padding-bottom: 48%;
-        margin: 1%;
+        width: 46%;
+        padding-bottom: 46%;
+        margin: 2%;
     }
 }
 
 @media screen and (max-width: 450px) {
     .portfolio-piece {
-        width: 100%;
-        padding-bottom: 100%;
+        width: 96%;
+        padding-bottom: 96%;
+        margin: 2%;
     }
 }
 
@@ -399,13 +413,14 @@ nav {
     bottom: 0;
     left: 0;
     opacity: 0.0;
-    background-image: linear-gradient(to bottom right,#37749C, #3C89BB);
+    /*background-image: linear-gradient(to bottom right,#37749C, #3C89BB);*/
+    background-color: black;
     transition: all ease-in-out 0.3s;
     mix-blend-mode: multiply;
 }
 
 .portfolio-piece:hover:before {
-    opacity: 0.6;
+    opacity: 0.5;
 }
 
 .portfolio-piece:active:before {
@@ -666,11 +681,12 @@ nav {
 
 .social a {
     color: #c0c0c0;
+    transition: all ease-in-out 0.3s;
 }
 
 .social a:hover {
     color: #505C68;
-    transition: all ease-in-out 0.1s;
+    transition: all ease-in-out 0.3s;
 }
 
 
@@ -769,9 +785,9 @@ nav {
     line-height: 4rem;
     color: white;
     width: 100%;
-    background: #43cea2;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom right, #37749C, #3C89BB);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom right, #37749C, #3C89BB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #3774bC;  /* fallback for old browsers */
+    /*background: -webkit-linear-gradient(to bottom right, #37749C, #3C89BB);  /* Chrome 10-25, Safari 5.1-6 */
+    /*background: linear-gradient(to bottom right, #37749C, #3C89BB);  W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .site-footer .centered-section {
