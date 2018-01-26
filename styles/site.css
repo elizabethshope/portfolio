@@ -32,22 +32,6 @@
     margin: auto;
 }
 
-/* HOVER STYlES */
-/*.eliz-hoverable {
-    cursor: pointer;
-    color: rgba(0, 0, 0, 0.4);
-}
-.eliz-hoverable:hover {
-    color: rgba(0, 0, 0, 0.6);
-}
-.eliz-hoverable:active {
-    color: rgba(0, 0, 0, 0.8);
-}
-
-.active-class {
-    color: rgba(0, 0, 1, 0.6);
-}*/
-
 /* HEADER */
 .header {
     width: 100%;
@@ -58,7 +42,7 @@
 
 .header-inner {
     display: flex;
-    padding: 1rem 1.5rem;
+    padding: 1rem 2rem;
 }
 
 .header .title {
@@ -73,11 +57,6 @@
     font-family: 'Shadows Into Light', cursive;
     font-size: 1.2rem;
 }
-
-/*.header.stuck-to-top .title:hover {
-    color: #3774bC;
-    transition: all ease-in-out 0.3s;
-}*/
 
 .eliz-page-link {
     margin: 0 1em;
@@ -117,6 +96,7 @@
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
 }
+
 
 .stuck-to-top .eliz-page-link li {
     position: relative;
@@ -193,10 +173,6 @@
     box-shadow: 1px 1px 1px rgba(10, 10, 10, 0.3);
 }
 
-.header .icon {
-    display: none;
-}
-
 .header a {
     height: 0;
     margin: 0;
@@ -218,12 +194,12 @@ input {
 
 .header li {
     float: left;
-    margin: 1rem 1rem;
+    margin: 1rem 3rem 1rem 0rem;
 }
 
 .header.stuck-to-top li {
     float: left;
-    margin: 0rem 1.5rem;
+    margin: 0rem 0rem 0rem 3rem;
 }
 
 .header.stuck-to-top ul {
@@ -260,25 +236,50 @@ nav {
     -webkit-touch-callout: none;
 }
 
-@media screen and (min-width: 601px;) {
+@media screen and (min-width: 501px) {
     span {
         display: false;
     }
 }
 
-@media screen and (max-width: 600px) {
-    .stuck-to-top a
+@media screen and (max-width: 500px) {
+    .stuck-to-top .eliz-page-link li
     {
         text-decoration: none;
         color: black;
-        transition: color 0.3s ease;
+        font-weight: 400;
+        margin: 0;
     }
 
-    .stuck-to-top a:hover
+    .stuck-to-top .eliz-page-link li:hover
     {
-        color: grey;
-        transition: color 0.3s ease;
+        color: black;
+        font-weight: 400;
     }
+
+    .stuck-to-top .eliz-page-link li:before
+    {
+        visibility: hidden;
+    }
+
+    .stuck-to-top .eliz-page-link li:hover:before
+    {
+        visibility: hidden;
+    }
+
+    .stuck-to-top .eliz-page-link .active-class li
+    {
+        text-decoration: none;
+        color: black;
+        font-weight: 400;
+    }
+
+    .stuck-to-top .eliz-page-link .active-class li:hover
+    {
+        color: black;
+        font-weight: 400;
+    }
+
 
     .stuck-to-top .hamburger {
         display: flex;
@@ -332,7 +333,7 @@ nav {
         position: absolute;
         right: 0;
         top: 59px;
-        width: 200px;
+        width: 160px;
         padding-left: 25px;
       
         background: white;
@@ -417,11 +418,15 @@ nav {
 
 /* PORTFOLIO */
 .portfolio-section {
-    padding: 6rem calc(2rem - 1%);
-/*    height: auto;*/
+    padding: 6rem 2rem;
     overflow: hidden;
-
 }
+
+.portfolio-section h2 {
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 2rem;
+}
+
 .portfolio-section ul {
     list-style-type: none;
     /*display: flex;*/
@@ -458,9 +463,9 @@ nav {
 
 @media screen and (max-width: 450px) {
     .portfolio-piece {
-        width: 96%;
-        padding-bottom: 96%;
-        margin: 2%;
+        width: 100%;
+        padding-bottom: 98%;
+        margin: 3% 0%;
     }
 }
 
@@ -597,33 +602,48 @@ nav {
 }*/
 
 
-
-
-/*.my-hero-text h5 {
-    font-weight: 300;
-    color: #fefefe;
-    text-shadow: 1px 1px 2px #0a0a0a;
-    position: absolute;
-    top: 175px;
-    width: 100%;
-    text-align: center;
-}*/
-
 /* ABOUT ME SECTION */
 .about-me {
     background: linear-gradient(to bottom right, #c0c0c0, #f2f2f2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    /*padding: 2rem 2rem 0 2rem;*/
-    font-size: 3vw;
+/*    padding: 6rem;*/
+    /*font-size: 3vw;*/
 
 }
 
-.about-me, .contact {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.about-content {
+    padding: 6rem 2rem;
 }
 
-.about-container {
+.about-content h2 {
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 2rem;
+}
+
+.about-me p {
+    font-size: 1.5rem;
+}
+
+@media screen and (min-width: 501px) {
+    .img-emu {
+        float: left;
+        width: 60%;
+        padding: 0.8rem 2rem 1.2rem 0%;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .img-emu {
+        width: 100%;
+        padding: 0rem 0rem 2rem 0rem;
+    }
+
+    .about-me p {
+        font-size: 1.25rem;
+    }
+}
+
+/*.about-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -721,13 +741,22 @@ nav {
     .about-text-1 p, .about-text-2 p {
         font-size: 1.7rem;
     }
-}
+}*/
 
 /* CONTACT SECTION */
 .contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 2rem 2rem 0 2rem;
     font-size: 2rem;
     margin-bottom: -64px;
+}
+
+@media screen and (max-width: 475px) {
+    .contact {
+        margin-bottom: -108px;
+    }
 }
 
 .social i {
@@ -762,7 +791,7 @@ nav {
 
 
 /* MENU */
-.my-menu-text {
+/*.my-menu-text {
     color: #F8F8FF;
     font-family: 'Raleway', sans-serif;
 }
@@ -782,7 +811,7 @@ nav {
 .top {
     position: absolute;
     top: 8px;
-}
+}*/
 
 /* VIZ PAGES */
 .viz-header {
@@ -856,13 +885,13 @@ nav {
     line-height: 4rem;
     color: white;
     width: 100%;
-    background: #3774bC;  /* fallback for old browsers */
-    /*background: -webkit-linear-gradient(to bottom right, #37749C, #3C89BB);  /* Chrome 10-25, Safari 5.1-6 */
-    /*background: linear-gradient(to bottom right, #37749C, #3C89BB);  W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #3774bC;
 }
 
 .site-footer .centered-section {
     padding: 0 2rem;
+    display: flex;
+    flex-direction: row;
 }
 
 .spaced-fat {
@@ -877,6 +906,38 @@ nav {
     vertical-align: middle;
     margin-bottom: 0;
     float: left;
+    flex-grow: 1;
+}
+
+.site-footer .social {
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+
+.site-footer .social i {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: white;
+    vertical-align: middle;
+    float: right; 
+    padding: 1.25rem 1rem;
+    line-height: 1; 
+}
+
+@media screen and (max-width: 500px) {
+    .site-footer .centered-section {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .site-footer .social {
+        float: left; 
+    }
+
+    .site-footer .social i {
+        padding: 1.25rem 1rem 0rem 1rem;
+    }
 }
 
 .shift-left-385 {

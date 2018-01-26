@@ -39,7 +39,7 @@
                     <ul id="menu">
                         <a id="visualizations-link" class="eliz-page-link eliz-hoverable"><li>Visualizations</li></a>
                         <a id="about-link" class="eliz-page-link eliz-hoverable"><li>About</li></a>
-                        <a id="contact-link" class="eliz-page-link eliz-hoverable"><li>Contact</li></a>
+                        <!-- <a id="contact-link" class="eliz-page-link eliz-hoverable"><li>Contact</li></a> -->
                     </ul>
                 </div>    
             </nav>
@@ -64,7 +64,7 @@
         id="visualizations-section"
         class="centered-section portfolio-section section"
     >
-
+        <h2>Data Visualizations</h2>
         <ul>
             <li class="portfolio-piece plotly-election">
                 <a 
@@ -196,8 +196,9 @@
         class="about-me section"
     >
         <div class="centered-section">
+            <div class="about-content">
             <!-- <h2 class="raleway">About</h2> -->
-            <div class="about-container">
+            <!-- <div class="about-container">
                 <div class="about-text-1">
                     <p>I am a data scientist finishing an M.S. in data science at Georgetown University. I spent the first part of my career focused directly on environmental policy and advocacy.</p> 
                 </div>
@@ -212,11 +213,29 @@
                 <div class="about-text-2">
                     <p>Now, I use data science to help advance environmental, social justice, and progressive causes.</p> 
                 </div>
+            </div> -->
+                <h2>About Me</h2>
+                <p> 
+                    <img class="img-emu" src="images/elizabeth-with-emu.jpg"> 
+                    I am a newly minted data scientist, and hope to use my skills to help solve environmental and social justice problems, and elect progressive political candidates. 
+                </p>
+
+                <p>
+                    Following a seven year career primarily focused on environmental advocacy, I decided to expand my advocacy and analysis toolkit via Georgetown's M.S. in data science program, and will graduate in May 2018. 
+                </p>
+
+                <p>
+                    My courses have covered topics including data visualization, natural language processing, algorithm design, optimization, longitudinal analysis, and Bayesian statistics. For collecting, cleaning, analyzing and visualizing data, my programming languages of choice are Python and R.
+                </p>
+
+                <p>
+                    Outside of data science, I enjoy riding bicycles, hiking, cooking, playing the flute, and hanging out with my family's pet emu in the Hudson Valley. 
+                </p>
             </div>
         </div>
     </div>
 
-    <div
+<!--     <div
         id="contact-section"
         class="contact section"
     >
@@ -228,13 +247,13 @@
                 <a class="contact-icon" href="mailto:elizabeth.shope@gmail.com" target="_blank"><i class="fi-mail"></i></a>
             </p>
         </div>
-    </div>
+    </div> -->
 
     <div id="footer"></div>
 
 
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+<!--     <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script> -->
     <script src="scripts/site.js"></script>
     <script type="text/javascript">
         const headerElement = document.getElementById('header');
@@ -252,7 +271,7 @@
             );
         };
 
-        const sectionsAndLinks = ['top', 'visualizations', 'about', 'contact'].map(
+        const sectionsAndLinks = ['top', 'visualizations', 'about'].map(
             linkName => ({
                 section: document.getElementById(`${linkName}-section`),
                 link: document.getElementById(`${linkName}-link`)
