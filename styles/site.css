@@ -36,7 +36,7 @@
 .header {
     width: 100%;
     position: absolute;
-    top: calc(100% - 100px);
+    top: calc(100% - 150px);
     background: rgba(255, 255, 255, 0);
 }
 
@@ -68,6 +68,7 @@
 .eliz-page-link li {
     position: relative;
     color: white;
+    font-size: 1.2rem;
     font-weight: 400;
     text-decoration: none;
     transition: all ease-in-out 0.3s;
@@ -103,6 +104,7 @@
 .stuck-to-top .eliz-page-link li {
     position: relative;
     color: black;
+    font-size: 1rem;
     font-weight: 400;
     text-decoration: none;
     transition: all ease-in-out 0.3s;
@@ -196,7 +198,13 @@ input {
 
 .header li {
     float: left;
-    margin: 1rem 3rem 1rem 0rem;
+    margin: 1rem 1.5rem 1rem 1.5rem;
+}
+
+@media screen and (min-width: 375px) {
+    .header li {
+        margin: 1rem;
+    }
 }
 
 .header.stuck-to-top li {
@@ -219,6 +227,11 @@ input {
 }
 
 nav {
+    /*width: 100%;*/
+    margin: auto;
+}
+
+.stuck-to-top nav {
     width: 100%;
 }
 
@@ -401,7 +414,7 @@ nav {
 
 .top-section h1 {
     font-size: 4rem;
-    padding: 2rem;
+    padding: 6rem 2rem 2rem 2rem;
     color: white;
     bottom: 0;
     margin: 0;
@@ -409,6 +422,13 @@ nav {
     font-family: 'Raleway', sans-serif;
     font-weight: 500;
     font-style: italic;
+    text-align: center;
+}
+
+@media screen and (max-height: 350px) {
+    .top-section h1 {
+        padding: 2rem 2rem 2rem 2rem;
+    }
 }
 
 .canvas-div {
