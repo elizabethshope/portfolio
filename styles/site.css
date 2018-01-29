@@ -201,7 +201,7 @@ input {
     margin: 1rem 1.5rem 1rem 1.5rem;
 }
 
-@media screen and (min-width: 375px) {
+@media screen and (max-width: 375px) {
     .header li {
         margin: 1rem;
     }
@@ -553,84 +553,51 @@ nav {
 .plotly-election {
     background-image: url('../images/plotly-election.png'); 
 }
-/*.plotly-election:before {
-    background-image: linear-gradient(to bottom right,#37749C, #3C89BB));
-}*/
 
 .plotly-energy {
     background-image: url('../images/plotly-energy.png');
 }
-/*.plotly-energy:before {
-    background-image: linear-gradient(to bottom right,#37749C, #3C89BB));
-}*/
 
 .ggplot2-cancer {
     background-image: url('../images/ggplot2-cancer.png');
 }
-/*.ggplot2-cancer:before {
-    background-image: linear-gradient(to bottom right,#37749C, #3C89BB));
-}*/
 
 .plotly-bikeshare {
     background-image: url('../images/plotly-bikeshare.png');
 }
-/*.plotly-bikeshare:before {
-    background-image: linear-gradient(to bottom right,#002f4b,#dc4225);
-}*/
 
 .ggplot2-bikeshare {
     background-image: url('../images/ggplot2-bikeshare.png');
 }
-/*.ggplot2-bikeshare:before {
-    background-image: linear-gradient(to bottom right,#002f4b,#dc4225);
-}*/
 
 .tableau-education-poverty {
     background-image: url('../images/tableau-education-poverty.png');
 }
-/*.tableau-education-poverty:before {
-    background-image: linear-gradient(to bottom right,#002f4b,#dc4225);
-}*/
 
 .trump-twitter-network-bokeh {
     background-image: url('../images/trump-twitter-network-bokeh.png');
 }
-/*.trump-twitter-network-bokeh:before {
-    background-image: linear-gradient(to bottom right,#002f4b,#dc4225);
-}*/
 
 .happiness-tableau {
     background-image: url('../images/happiness-tableau.png');
 }
-/*.happiness-tableau:before {
-    background-image: linear-gradient(to bottom right,#002f4b,#dc4225);
-}*/
 
 .tribe-network-networkd3 {
     background-image: url('../images/tribe-network-networkd3.png');
 }
-/*.tribe-network-networkd3:before {
-    background-image: linear-gradient(to bottom right,#002f4b,#dc4225);
-}*/
 
 .squirrel-wordcloud {
     background-image: url('../images/squirrel-wordcloud.png');
 }
-/*.squirrel-wordcloud:before {
-    background-image: linear-gradient(to bottom right,#002f4b,#dc4225);
-}*/
 
 .leaflet-cancer-refineries {
     background-image: url('../images/leaflet-cancer-refineries.png');
 }
-/*.leaflet-cancer-refineries:before {
-    background-image: linear-gradient(to bottom right,#002f4b,#dc4225);
-}*/
 
 
 /* ABOUT ME SECTION */
 .about-me {
-    background: linear-gradient(to bottom right, #c0c0c0, #f2f2f2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to bottom right, #c0c0c0 10%, #f8f8f8 100%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 /*    padding: 6rem;*/
     /*font-size: 3vw;*/
 
@@ -953,6 +920,10 @@ nav {
     float: right; 
     padding: 1.25rem 1rem;
     line-height: 1; 
+}
+
+.site-footer .social i:hover {
+    color: #c0c0c0;
 }
 
 @media screen and (max-width: 500px) {
