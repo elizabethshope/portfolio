@@ -446,6 +446,11 @@ nav {
 }*/
 
 /* PORTFOLIO */
+.portfolio {
+    background: #f8f8f8;
+    /*background: linear-gradient(to bottom right, #c0c0c0 10%, #f8f8f8 100%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */*/
+}
+
 .portfolio-section {
     padding: 6rem 2rem;
     overflow: hidden;
@@ -458,30 +463,78 @@ nav {
     font-size: 2rem;
 }
 
-.portfolio-section ul {
-    list-style-type: none;
-    /*display: flex;*/
-    /*flex-wrap: wrap;*/
-    margin: 0 auto;
-    display: block;
-
+.portfolio-section .item h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.2rem;
 }
 
-.portfolio-piece {
-/*    padding: 10rem;
+.portfolio-section ul {
+    list-style-type: none;
+    margin: 0 auto;
+    display: block;
+}
+
+.item-parent {
+    display: grid;
+    grid-template-rows: repeat(autofill, minMax(200px, 1fr));
+    grid-template-columns: minmax(150px, 400px) minmax(150px, 400px);
+    grid-row-gap: 3em;
+    grid-column-gap: 3em;
+    padding: 1rem 0rem;
+}
+
+@media screen and (max-width: 650px) {
+    .item-parent {
+        grid-template-columns: minmax(150px, 400px);
+        padding: 1rem calc((100% - 400px)/2)
+    }
+
+    .portfolio-section h2 {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .item-parent {
+        padding: 1rem 0rem;
+    }
+}
+
+figure {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px rgba(170, 167, 170, 0.2);
+  margin: 0;
+  overflow: hidden;
+  /* display: inline-block; */
+  position: relative;
+}
+
+figcaption {
+  padding: 1rem;
+  margin-top: 3px;
+  white-space: pre-line;
+}
+
+figure img {
+    cursor: pointer;
+    transition: all 0.2s ease;
+    max-width: 100%;
+}
+
+figure img:hover {
     overflow: hidden;
-    position: relative;
-    flex-basis: 33%;
-    min-width: 12rem;
-    max-width: 33%;
-    height: calc(740px / 3);*/
+    transform: scale(1.1);
+}
+
+/*.portfolio-piece {
     width: calc(88% / 3);
     padding-bottom: calc(88% / 3);
     margin: 2%;
     float: left;
     position: relative;
     display: inline-block;
-    /*flex-grow: 1;*/
 }
 
 @media screen and (max-width: 800px) {
@@ -501,10 +554,6 @@ nav {
 }
 
 .portfolio-piece {
-    /*position: relative;*/
-/*    width: 100%;
-    height: 100%;*/
-    /*min-height: 100%;*/
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -512,7 +561,6 @@ nav {
 }
 
 .portfolio-piece:before {
-    /*margin: 1rem;*/
     content: '';
     position: absolute;
     top: 0;
@@ -520,7 +568,6 @@ nav {
     bottom: 0;
     left: 0;
     opacity: 0.0;
-    /*background-image: linear-gradient(to bottom right,#37749C, #3C89BB);*/
     background-color: black;
     transition: all ease-in-out 0.3s;
     mix-blend-mode: multiply;
@@ -536,7 +583,6 @@ nav {
 
 .portfolio-piece .portfolio-label {
     padding: 1rem;
-    /*z-index: 1;*/
     position: absolute;
     color: white;
 }
@@ -553,9 +599,9 @@ nav {
 
 .portfolio-label p {
     opacity: 0;
-}
+}*/
 
-.plotly-election {
+/*.plotly-election {
     background-image: url('../images/plotly-election.png'); 
 }
 
@@ -597,15 +643,12 @@ nav {
 
 .leaflet-cancer-refineries {
     background-image: url('../images/leaflet-cancer-refineries.png');
-}
+}*/
 
 
 /* ABOUT ME SECTION */
 .about-me {
     background: linear-gradient(to bottom right, #c0c0c0 10%, #f8f8f8 100%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-/*    padding: 6rem;*/
-    /*font-size: 3vw;*/
-
 }
 
 .about-content {
