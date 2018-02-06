@@ -441,10 +441,6 @@ nav {
     height: 100vh;    
 }
 
-/*canvas {
-    width: 100%
-}*/
-
 /* PORTFOLIO */
 .portfolio {
     background: #f8f8f8;
@@ -492,6 +488,10 @@ nav {
 
     .portfolio-section h2 {
         text-align: center;
+    }
+
+    .portfolio-section .item h2 {
+        text-align: left;
     }
 }
 
@@ -832,30 +832,6 @@ figure img:hover {
     transition: all ease-in-out 0.3s;
 }
 
-
-/* MENU */
-/*.my-menu-text {
-    color: #F8F8FF;
-    font-family: 'Raleway', sans-serif;
-}
-
-.my-menu-text a {
-    color: #F8F8FF;
-}
-
-.my-menu-text a:hover {
-    color: #F8F8FF;
-}
-
-.my-home-text {
-    font-weight: bold;
-}
-
-.top {
-    position: absolute;
-    top: 8px;
-}*/
-
 /* VIZ PAGES */
 .viz-header {
     height: 50vh;
@@ -876,10 +852,6 @@ figure img:hover {
     font-weight: 500;
     font-style: italic;
 }
-/*
-.viz-nav a:hover {
-    color: #9Cf9eB;
-}*/
 
 .viz-header h1 {
     font-size: 5rem;
