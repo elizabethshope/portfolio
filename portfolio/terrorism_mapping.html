@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112981317-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-112981317-1');
+    </script>
+    <title>Terrorism Mapping | Elizabeth Shope</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="stylesheet" type="text/css" href="/styles/site.css">
+    <link rel="stylesheet" type="text/css" href="/foundation-icons/foundation-icons.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Shadows+Into+Light" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>
+    <div class="viz-header my-gradient">
+        <div class="centered-section">
+            <div class="viz-nav">
+                <a href="/">Elizabeth Shope</a>
+            </div>
+            <div class="viz-title">
+                <h1>Data Visualization</h1>
+            </div>
+        </div>       
+    </div>
+    <div class="viz centered-section">
+        <h2>Terrorism Incidents in 2016: A Global Map</h2>
+        <p>
+            This map, built with Leaflet and R, provides a visual of where terrorism is occurring globally and locally. The numbers on the circles indicate how many incidents have occurred in that region. Click on any of them to zoom in on that region, and click on any of the specific markers to see information about a specific incident. 
+        </p>
+        <iframe src="../embeddings/terrorism_2016_map/" height="700"> </iframe>
+
+        <p>
+            One of the most significant things we notice in this map is the huge volume of terrorism incidents in Iraq. I was interested if Iraq has been a terrorism hotspot for several decades or if this is a newer problem there, so I created a Tableau visualization of map sub-plots to analyze this.
+        </p>
+
+        <h2>The Evolution of Terrorism in Iraq: 4 Snapshots</h2>
+        <p>
+            Here, we look at terrorism incidents in Iraq in 1976, 1996, 2006, and 2016, which are relatively representative
+            snapshots of these decades. There are no terrorism incidents listed in 1986 in Iraq (and not many generally in the 1980s)
+            in the Global Terrorism Database. The number of incidents in Iraq has increased dramatically, with
+            3 in 1976, 0 in 1986, 832 in 2006, and 3356 in 2016.
+        </p>
+
+        <div class='tableauPlaceholder' id='viz1512337304637' style='position: relative;'><noscript><a href='#'><img alt='Iraq Terrorism Evolution ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;te&#47;terrorism_incidents_iraq&#47;IraqTerrorismEvolution&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='terrorism_incidents_iraq&#47;IraqTerrorismEvolution' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;te&#47;terrorism_incidents_iraq&#47;IraqTerrorismEvolution&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1512337304637');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1000px';vizElement.style.height='827px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+        <br />
+        
+        <h2>References</h2>
+        <p>
+            You can find a link to the data subset I used for the 2016 global map <a href="https://github.com/elizabethshope/visualizations/blob/master/final_exam/terrorism_2016.csv" target="_blank">here</a>, and the code for creating the visualization <a href="https://github.com/elizabethshope/visualizations/blob/master/final_exam/2016_terrorism_map.R" target="_blank">here</a>. The data subset I used for the Iraq terrorism snapshots is <a href="https://github.com/elizabethshope/visualizations/blob/master/final_exam/iraq.csv", target="_blank">here</a>. The full Global Terrorism Database is posted -- along with many visualizations by other people -- <a href="https://www.kaggle.com/START-UMD/gtd" target="_blank">on Kaggle</a>.
+        </p>
+    </div>
+    <div id="footer"></div>
+
+
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+    <script src="/scripts/site.js"></script>
+</body>
+</html>
