@@ -33,32 +33,53 @@
     </div>
     <div class="viz centered-section">
         <h2>Cancer Incidence and Mortality in the United States: An Exploration</h2>
-        <p><img src="/images/cancer-ggplot2.png" alt="ggplot2 cancer exploration"></p>
-        <h2>About This Visualization</h2>
-        <p>These days, I frequently hear about people getting cancer. I have wondered if cancer is becoming
-            more common or if perhaps people are just more open in talking about it. Some other questions
-            I've had about cancer include: are certain races more affected than others? Is cancer more common among
-            men or women? What types of cancer are most common? And how does this vary by gender?
-            Also, with all the new treatments available, is mortality from cancer decreasing?
-            This set of ggplot2 plots explores these questions.</p>
-        <p>Some key findings include:</p>
-        <ul>
-            <li>Between 2000 and 2014, men have had higher cancer incidence rates than women.
-                The incidence rates for women have stayed roughly level over time with a little over 400 new cases per 100,000 women each year. For men, though, cancer incidence has decreased
-                during this time period from more than 600 new cases per 100,000 men each year to below 500 new cases
-                per 100,000 men each year.</li>
-            <li>Mortality rates are also higher for men than women; for both men and women, the mortality rates have
-                decreased over time in a remarkably linear fashion, suggesting that new treatments are helping people
-                survive cancer.</li>
-            <li>Among men, black men have both the highest cancer incidence rates and mortality rates of all the races.
-                For women, though, white women have the highest cancer incidence rates, but black women have the highest
-                mortality rates. In a more granular analysis, it would be interesting to try to determine why both black
-                men and black women have the highest mortality rates. Does this have to do with systemic injustices
-                such as lack of access to good health care and siting of polluting industrial facilities in heavily black
-                neighborhoods, or is this simply about genetic predisposition?</li>
-            <li>For women, breast cancer is by far the most prevalent.
-                For men, the most common leading sites are the male genital system, the prostate, and the digestive system.</li>
-        </ul>
+        <p>
+            These days, I frequently hear about people getting cancer. I have wondered if cancer is becoming more common or if perhaps people are just more open in talking about it. Some other questions I've had about cancer include: are certain races more affected than others? Is cancer more common among men or women? What types of cancer are most common? And how does this vary by gender? Also, with all the new treatments available, is mortality from cancer decreasing? This set of ggplot2 plots explores these questions.
+        </p>
+
+        <p>
+            First, we can look at how cancer incidence and mortality has evolved over time for both men and women. 
+        </p>
+
+        <p>
+            <img src="/images/cancer-by-year-gender.png" alt="ggplot2 Cancer by Year and Gender">
+        </p>
+
+        <p>
+            We see that between 2000 and 2014, men have had higher cancer incidence rates than women. The incidence rates for women have stayed roughly level over time with a little over 400 new cases per 100,000 women each year. For men, though, cancer incidence has decreased during this time period from more than 600 new cases per 100,000 men each year to below 500 new cases per 100,000 men each year.
+        </p>
+
+        <p>
+            Mortality rates are also higher for men than women; for both men and women, the mortality rates have decreased over time in a remarkably linear fashion, suggesting that new treatments are helping people survive cancer.
+        </p>
+
+        <p>
+            Next, we can look at cancer incidence and mortality by gender and race for the most recent year for which we have data, 2014. 
+        </p>
+
+        <p>
+            <img src="/images/cancer-by-gender-race.png" alt="ggplot2 Cancer by Gender and Race">
+        </p>
+
+        <p>
+            Among men, black men have both the highest cancer incidence rates and mortality rates of all the races. For women, though, white women have the highest cancer incidence rates, but black women have the highest mortality rates. In a more granular analysis, it would be interesting to try to determine why both black men and black women have the highest mortality rates. Does this have to do with systemic injustices such as lack of access to good health care and siting of polluting industrial facilities in heavily black neighborhoods, or is this simply about genetic predisposition?
+        </p>
+
+        <p>
+            Finally, we consider the types of cancers affecting different genders.
+        </p>
+
+        <p>
+            <img src="/images/cancer-by-gender-site.png" alt="ggplot2 Cancer by Gender and Leading Site">
+        </p>
+
+        <p>
+            For women, breast cancer is by far the most prevalent. For men, the most common leading sites are the male genital system, the prostate, and the digestive system.
+        </p>
+
+        <p>
+            This is an extensive data set, and these visualizations provide only a very preliminary exploration of this data that enable us to start thinking about what other questions we might want to ask about this data. 
+        </p>
 
         <h2>References</h2>
         <p>The clean data for this visualization is available
