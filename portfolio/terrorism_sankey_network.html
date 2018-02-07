@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112981317-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-112981317-1');
+    </script>
+    <title>Terrorism Sankey Network | Elizabeth Shope</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="stylesheet" type="text/css" href="/styles/site.css">
+    <link rel="stylesheet" type="text/css" href="/foundation-icons/foundation-icons.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Shadows+Into+Light" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>
+    <div class="viz-header my-gradient">
+        <div class="centered-section">
+            <div class="viz-nav">
+                <a href="/">Elizabeth Shope</a>
+            </div>
+            <div class="viz-title">
+                <h1>Data Visualization</h1>
+            </div>
+        </div>       
+    </div>
+    <div class="viz centered-section">
+        
+        <h2>Attack Types in Regions of the World</h2>
+        <iframe src="../embeddings/terrorism_network/" height="650"> </iframe>
+
+        <h2>About This Visualization</h2>
+
+        <p>
+            This Sankey Diagram shows the different terrorism attack types used in different regions of the world. We see that overall, there are the most incidents in the Middle East & North Africa and South Asia regions, and that bombings/explosions and armed assaults have been the most common types of attacks. Beyond this, there are not any especially clear patterns that emerge. 
+        </p>
+        <p>
+            I nevertheless wanted to include this visualization on my website for a few reasons: First, Sankey networks can be powerful for enabling patterns to emerge visually. Second, I find them to be aesthetically appealing. Finally, it is an example of a visualiztion I have created with R's NetworkD3 library, which is one of several fabulous libraries that enables non-D3 experts to create beautiful D3 visualizations.
+        </p>
+
+        <h2>References</h2>
+        <p>
+            You can find the code I used to create this visualization <a href="https://github.com/elizabethshope/visualizations/blob/master/terrorism_visualizations/sankey_network.R" target="_blank">here</a>. Here are links to the <a href="https://github.com/elizabethshope/visualizations/blob/master/terrorism_visualizations/NodeList.csv" target="_blank">node data</a> and <a href="https://github.com/elizabethshope/visualizations/blob/master/terrorism_visualizations/EdgeList.csv" target="_blank">edge data</a>. The full Global Terrorism Database is posted -- along with many visualizations by other people -- <a href="https://www.kaggle.com/START-UMD/gtd" target="_blank">on Kaggle</a>.
+        </p>
+    </div>
+    <div id="footer"></div>
+
+
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+    <script src="/scripts/site.js"></script>
+</body>
+</html>
