@@ -317,7 +317,7 @@ nav {
                   opacity 0.55s ease;
     }
 
-    /* 
+    /*
      * Transform all the slices of hamburger
      * into a crossmark.
      */
@@ -350,15 +350,15 @@ nav {
         top: 59px;
         width: 160px;
         padding-left: 25px;
-      
+
         background: white;
         list-style-type: none;
         -webkit-font-smoothing: antialiased;
       /* to stop flickering of text in safari */
-      
+
         transform-origin: 0% 0%;
         transform: translate(100%, 0);
-      
+
         transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
     }
 
@@ -438,7 +438,7 @@ nav {
 
 #particles-js {
     width: 100vw;
-    height: 100vh;    
+    height: 100vh;
 }
 
 /* PORTFOLIO */
@@ -550,7 +550,7 @@ figure img:hover {
 }
 
 @media screen and (min-width: 501px) {
-    .img-emu {
+    .img-headshot {
         float: left;
         width: 60%;
         padding: 0.8rem 2rem 1.2rem 0%;
@@ -559,7 +559,7 @@ figure img:hover {
 
 
 @media screen and (max-width: 500px) {
-    .img-emu {
+    .img-headshot {
         width: 100%;
         padding: 0rem 0rem 2rem 0rem;
     }
@@ -675,9 +675,9 @@ figure img:hover {
     font-weight: 500;
     color: white;
     vertical-align: middle;
-    float: right; 
+    float: right;
     padding: 1.25rem 1rem;
-    line-height: 1; 
+    line-height: 1;
 }
 
 .site-footer .social i:hover {
@@ -692,7 +692,7 @@ figure img:hover {
     }
 
     .site-footer .social {
-        float: left; 
+        float: left;
     }
 
     .site-footer .social i {
@@ -737,4 +737,3 @@ figure img:hover {
 .viz iframe {
     width: 100%;
 }
-
